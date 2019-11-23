@@ -7217,6 +7217,12 @@ form .ant-upload {
 .ant-menu-item > a::before {
   background-color: transparent;
 }
+.ant-menu-item > .ant-badge > a {
+  color: rgba(0, 0, 0, 0.65);
+}
+.ant-menu-item > .ant-badge > a:hover {
+  color: @primary-color;
+}
 .ant-menu-item-divider {
   background-color: #e8e8e8;
 }
@@ -9301,6 +9307,9 @@ li.ant-time-picker-panel-select-option-disabled {
 }
 li.ant-time-picker-panel-select-option-disabled:hover {
   background: transparent;
+}
+li.ant-time-picker-panel-select-option-disabled:focus {
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-time-picker-panel-addon {
   border-top: 1px solid #e8e8e8;
