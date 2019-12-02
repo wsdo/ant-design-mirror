@@ -1962,6 +1962,7 @@ this.tinycolor = tinycolor;
 @table-border-radius-base: @border-radius-base;
 @table-footer-bg: @background-color-light;
 @table-footer-color: @heading-color;
+@table-header-bg-sm: transparent;
 
 // Tag
 // --
@@ -8884,6 +8885,13 @@ tr.ant-table-expanded-row:hover {
 .ant-table-small > .ant-table-title {
   border-bottom: 1px solid #e8e8e8;
 }
+.ant-table-small > .ant-table-content > .ant-table-footer {
+  background-color: transparent;
+  border-top: 1px solid #e8e8e8;
+}
+.ant-table-small > .ant-table-content > .ant-table-footer::before {
+  background-color: transparent;
+}
 .ant-table-small > .ant-table-content > .ant-table-header > table,
 .ant-table-small > .ant-table-content > .ant-table-body > table,
 .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
@@ -8925,7 +8933,7 @@ tr.ant-table-expanded-row:hover {
   background-color: rgba(0, 0, 0, 0.01);
 }
 .ant-table-small > .ant-table-content .ant-table-header {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 4px 4px 0 0;
 }
 .ant-table-small > .ant-table-content .ant-table-placeholder,
