@@ -1806,6 +1806,7 @@ this.tinycolor = tinycolor;
 
 //Dropdown
 @dropdown-vertical-padding: 5px;
+@dropdown-edge-child-vertical-padding: 4px;
 @dropdown-font-size: @font-size-base;
 @dropdown-line-height: 22px;
 
@@ -1853,9 +1854,20 @@ this.tinycolor = tinycolor;
 @select-border-color: @border-color-base;
 @select-item-selected-font-weight: 600;
 @select-dropdown-bg: @component-background;
+@select-dropdown-vertical-padding: @dropdown-vertical-padding;
+@select-dropdown-edge-child-vertical-padding: @dropdown-edge-child-vertical-padding;
+@select-dropdown-font-size: @dropdown-font-size;
+@select-dropdown-line-height: @dropdown-line-height;
 @select-item-selected-bg: @background-color-light;
 @select-item-active-bg: @item-active-bg;
 @select-background: @component-background;
+
+// Cascader
+// ----
+@cascader-dropdown-vertical-padding: @dropdown-vertical-padding;
+@cascader-dropdown-edge-child-vertical-padding: @dropdown-edge-child-vertical-padding;
+@cascader-dropdown-font-size: @dropdown-font-size;
+@cascader-dropdown-line-height: @dropdown-line-height;
 
 // Anchor
 // ---
@@ -8202,12 +8214,6 @@ form .ant-upload {
 }
 .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
   background-color: color(~`colorPalette("@{primary-color}", 1)`);
-}
-.ant-select-dropdown-menu-item:first-child {
-  border-radius: 4px 4px 0 0;
-}
-.ant-select-dropdown-menu-item:last-child {
-  border-radius: 0 0 4px 4px;
 }
 .ant-select-dropdown-menu-item-selected {
   color: rgba(0, 0, 0, 0.65);
