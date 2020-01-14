@@ -1781,10 +1781,10 @@ this.tinycolor = tinycolor;
 @layout-trigger-color-light: @text-color;
 
 // z-index list, order by `z-index`
+@zindex-badge: auto;
 @zindex-table-fixed: auto;
 @zindex-affix: 10;
 @zindex-back-top: 10;
-@zindex-badge: 10;
 @zindex-picker-panel: 10;
 @zindex-popup-close: 10;
 @zindex-modal: 1000;
@@ -5185,7 +5185,7 @@ html {
   border-radius: 0 0 4px 4px;
 }
 .ant-collapse-borderless {
-  background-color: #fff;
+  background-color: #fafafa;
   border: 0;
 }
 .ant-collapse-borderless > .ant-collapse-item {
@@ -8773,6 +8773,9 @@ form .ant-upload {
 tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {
   background: #fbfbfb;
+}
+.ant-table-scroll table .ant-table-fixed-columns-in-body:not([colspan]) {
+  color: transparent;
 }
 .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
   background: #fff;
