@@ -1084,6 +1084,7 @@ textarea.ant-input {
 .ant-input-group.ant-input-group-compact::before,
 .ant-input-group.ant-input-group-compact::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-input-group.ant-input-group-compact::after {
@@ -2242,6 +2243,7 @@ textarea.ant-mentions {
 .ant-menu::before,
 .ant-menu::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-menu::after {
@@ -3210,6 +3212,7 @@ textarea.ant-mentions {
 .ant-modal-confirm-body-wrapper::before,
 .ant-modal-confirm-body-wrapper::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-modal-confirm-body-wrapper::after {
@@ -5255,6 +5258,7 @@ span.ant-radio + * {
 .ant-select-selection--multiple::before,
 .ant-select-selection--multiple::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-select-selection--multiple::after {
@@ -6539,7 +6543,7 @@ span.ant-radio + * {
   line-height: 1.5;
 }
 .ant-steps-label-vertical.ant-steps-small:not(.ant-steps-dot) .ant-steps-item-icon {
-  margin-left: 47px;
+  margin-left: 46px;
 }
 .ant-steps-dot .ant-steps-item-title,
 .ant-steps-dot.ant-steps-small .ant-steps-item-title {
@@ -6970,6 +6974,7 @@ span.ant-radio + * {
 .ant-table-wrapper::before,
 .ant-table-wrapper::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-table-wrapper::after {
@@ -7999,6 +8004,7 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
 .ant-tabs::before,
 .ant-tabs::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-tabs::after {
@@ -8041,6 +8047,7 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
 .ant-tabs-nav-container::before,
 .ant-tabs-nav-container::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-tabs-nav-container::after {
@@ -8811,6 +8818,7 @@ li.ant-time-picker-panel-select-option-disabled:focus {
 .ant-time-picker-panel-combobox::before,
 .ant-time-picker-panel-combobox::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-time-picker-panel-combobox::after {
@@ -11016,6 +11024,7 @@ div.ant-typography-edit-content {
 .ant-upload-picture-card-wrapper::before,
 .ant-upload-picture-card-wrapper::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-upload-picture-card-wrapper::after {
@@ -11038,6 +11047,7 @@ div.ant-typography-edit-content {
 .ant-upload-list::before,
 .ant-upload-list::after {
   display: table;
+  width: 100%;
   content: '';
 }
 .ant-upload-list::after {
