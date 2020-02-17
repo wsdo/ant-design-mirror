@@ -405,7 +405,6 @@ mark {
 .clearfix::before,
 .clearfix::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .clearfix::after {
@@ -4798,7 +4797,6 @@ a.ant-btn-sm {
 .ant-card-head::before,
 .ant-card-head::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-card-head::after {
@@ -4847,7 +4845,6 @@ a.ant-btn-sm {
 .ant-card-body::before,
 .ant-card-body::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-card-body::after {
@@ -4899,7 +4896,6 @@ a.ant-btn-sm {
 .ant-card-actions::before,
 .ant-card-actions::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-card-actions::after {
@@ -4965,7 +4961,6 @@ a.ant-btn-sm {
 .ant-card-meta::before,
 .ant-card-meta::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-card-meta::after {
@@ -9074,7 +9069,6 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 .ant-form-item-control::before,
 .ant-form-item-control::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-form-item-control::after {
@@ -9799,7 +9793,6 @@ form:not(.ant-form-vertical) .ant-input-group-wrapper {
 .ant-row::before,
 .ant-row::after {
   display: table;
-  width: 100%;
   content: '';
 }
 .ant-row::after {
