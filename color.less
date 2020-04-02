@@ -1540,7 +1540,7 @@ this.tinycolor = tinycolor;
 
 // -------- Colors -----------
 
-@info-color: @blue-6;
+@info-color: @primary-color;
 @success-color: @green-6;
 @processing-color: @blue-6;
 @error-color: @red-5;
@@ -1776,6 +1776,8 @@ this.tinycolor = tinycolor;
 @radio-dot-disabled-color: fade(@black, 20%);
 // solid text-color
 @radtio-solid-checked-color: @component-background;
+// Keep typo compatible
+@radio-solid-checked-color: @radtio-solid-checked-color;
 
 // Radio buttons
 @radio-button-bg: @btn-default-bg;
@@ -2183,6 +2185,8 @@ this.tinycolor = tinycolor;
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
+@tabs-card-horizontal-padding: 8px @padding-md;
+@tabs-card-horizontal-padding-sm: 6px @padding-md;
 @tabs-title-font-size: @font-size-base;
 @tabs-title-font-size-lg: @font-size-lg;
 @tabs-title-font-size-sm: @font-size-base;
@@ -7331,7 +7335,10 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-list-split .ant-list-header {
   border-bottom: 1px solid #f0f0f0;
 }
-.ant-list-something-after-last-item .ant-spin-container > .ant-list-items > .ant-list-item:last-child {
+.ant-list-split.ant-list-empty .ant-list-footer {
+  border-top: 1px solid #f0f0f0;
+}
+.ant-list-split.ant-list-something-after-last-item .ant-spin-container > .ant-list-items > .ant-list-item:last-child {
   border-bottom: 1px solid #f0f0f0;
 }
 .ant-list-vertical .ant-list-item-meta-title {
@@ -8905,8 +8912,8 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-table.ant-table-bordered .ant-table-expanded-row-fixed::after {
   border-right: 1px solid #f0f0f0;
 }
-.ant-table.ant-table-bordered.ant-table-fixed-column tr.ant-table-expanded-row > td,
-.ant-table.ant-table-bordered.ant-table-fixed-column tr.ant-table-placeholder > td {
+.ant-table.ant-table-bordered.ant-table-scroll-horizontal tr.ant-table-expanded-row > td,
+.ant-table.ant-table-bordered.ant-table-scroll-horizontal tr.ant-table-placeholder > td {
   border-right: 0;
 }
 .ant-table.ant-table-bordered .ant-table-footer {
