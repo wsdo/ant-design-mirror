@@ -6337,8 +6337,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-picker-clear:hover {
   color: rgba(0, 0, 0, 0.45);
 }
-.ant-picker-separator {
-  color: rgba(0, 0, 0, 0.25);
+.ant-picker-separator::before,
+.ant-picker-separator::after {
+  border-top: 1px solid #979797;
 }
 .ant-picker-range .ant-picker-active-bar {
   background: @primary-color;
@@ -7645,15 +7646,15 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-menu-submenu-disabled > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after {
   background: rgba(0, 0, 0, 0.25) !important;
 }
-.ant-menu-dark,
-.ant-menu-dark .ant-menu-sub {
+.ant-menu.ant-menu-dark,
+.ant-menu.ant-menu-dark .ant-menu-sub {
   color: rgba(255, 255, 255, 0.65);
   background: #001529;
 }
-.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
-.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
-.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
-.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
+.ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+.ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+.ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+.ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
   background: #fff;
 }
 .ant-menu-dark.ant-menu-submenu-popup {
@@ -7738,6 +7739,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 }
 .ant-menu-dark .ant-menu-item:hover {
   background-color: transparent;
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: @primary-color;
 }
 .ant-menu-dark .ant-menu-item-selected {
   color: #fff;
@@ -8349,21 +8353,21 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   border-color: #d9d9d9;
   box-shadow: none;
 }
-.ant-radio-button-wrapper-rtl {
+.ant-radio-button-wrapper.ant-radio-button-wrapper-rtl {
   border-right-width: 0;
   border-left-width: 1px;
 }
-.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:first-child {
+.ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:first-child {
   border-right: 1px solid #d9d9d9;
   border-radius: 0 2px 2px 0;
 }
 .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
   border-right-color: color(~`colorPalette("@{primary-color}", 5)`);
 }
-.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:last-child {
+.ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper:last-child {
   border-radius: 2px 0 0 2px;
 }
-.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper-disabled:first-child {
+.ant-radio-button-wrapper.ant-radio-button-wrapper-rtl.ant-radio-button-wrapper-disabled:first-child {
   border-right-color: #d9d9d9;
 }
 .ant-rate {
@@ -8885,7 +8889,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-switch-checked {
   background-color: @primary-color;
 }
-.ant-table.ant-table-small .ant-table-thead > tr > th {
+.ant-table-small .ant-table-thead > tr > th {
   background-color: #fafafa;
 }
 .ant-table.ant-table-bordered .ant-table-title {
@@ -8954,14 +8958,14 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-table-tbody > tr.ant-table-row-selected :hover > td {
   background: color(~`colorPalette("@{primary-color}", 1)`);
 }
-.ant-table-tbody > tr .ant-table td {
+.ant-table-tbody > tr .ant-table-wrapper:only-child .ant-table td {
   background: transparent;
 }
-.ant-table-tbody > tr .ant-table-tbody > tr:last-child > td {
+.ant-table-tbody > tr .ant-table-wrapper:only-child .ant-table-tbody > tr:last-child > td {
   border-bottom: 0;
 }
-.ant-table-tbody > tr .ant-table-tbody > tr:last-child > td:first-child,
-.ant-table-tbody > tr .ant-table-tbody > tr:last-child > td:last-child {
+.ant-table-tbody > tr .ant-table-wrapper:only-child .ant-table-tbody > tr:last-child > td:first-child,
+.ant-table-tbody > tr .ant-table-wrapper:only-child .ant-table-tbody > tr:last-child > td:last-child {
   border-radius: 0;
 }
 .ant-table tfoot > tr > th,
