@@ -2075,7 +2075,7 @@ this.tinycolor = tinycolor;
 @table-selected-row-color: inherit;
 @table-selected-row-bg: @primary-1;
 @table-body-selected-sort-bg: @table-selected-row-bg;
-@table-selected-row-hover-bg: @table-selected-row-bg;
+@table-selected-row-hover-bg: darken(@table-selected-row-bg, 2%);
 @table-expanded-row-bg: #fbfbfb;
 @table-padding-vertical: 16px;
 @table-padding-horizontal: 16px;
@@ -2600,7 +2600,6 @@ body {
 [id^='components-grid-demo-'] .demo-row,
 .grid-demo .code-box-demo .demo-row,
 [id^='components-grid-demo-'] .code-box-demo .demo-row {
-  background-image: linear-gradient(90deg, #f5f5f5 4.16666667%, transparent 4.16666667%, transparent 8.33333333%, #f5f5f5 8.33333333%, #f5f5f5 12.5%, transparent 12.5%, transparent 16.66666667%, #f5f5f5 16.66666667%, #f5f5f5 20.83333333%, transparent 20.83333333%, transparent 25%, #f5f5f5 25%, #f5f5f5 29.16666667%, transparent 29.16666667%, transparent 33.33333333%, #f5f5f5 33.33333333%, #f5f5f5 37.5%, transparent 37.5%, transparent 41.66666667%, #f5f5f5 41.66666667%, #f5f5f5 45.83333333%, transparent 45.83333333%, transparent 50%, #f5f5f5 50%, #f5f5f5 54.16666667%, transparent 54.16666667%, transparent 58.33333333%, #f5f5f5 58.33333333%, #f5f5f5 62.5%, transparent 62.5%, transparent 66.66666667%, #f5f5f5 66.66666667%, #f5f5f5 70.83333333%, transparent 70.83333333%, transparent 75%, #f5f5f5 75%, #f5f5f5 79.16666667%, transparent 79.16666667%, transparent 83.33333333%, #f5f5f5 83.33333333%, #f5f5f5 87.5%, transparent 87.5%, transparent 91.66666667%, #f5f5f5 91.66666667%, #f5f5f5 95.83333333%, transparent 95.83333333%);
 }
 .grid-demo .ant-row > div,
 [id^='components-grid-demo-'] .ant-row > div,
@@ -2907,15 +2906,12 @@ pre[class*='language-'] {
   color: #52c41a !important;
 }
 .code-box-codepen {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/OtZslpOjYXijshDERXwc.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box-riddle {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/DlHbxMCyeuyOrqOdbgik.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box-codesandbox {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/aaYmtdDyHSCkXyLZVgGK.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box pre code {
@@ -3431,7 +3427,6 @@ ul.anticons-list li::after {
 }
 .motion-example {
   color: #fff;
-  background: url(https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg) center / 180px;
   border-radius: 8px;
 }
 .algolia-autocomplete .ds-dropdown-menu {
@@ -3504,13 +3499,10 @@ ul.anticons-list li::after {
   border-bottom: 1px solid #f0f0f0;
 }
 [data-theme='dark'] .code-box-codepen {
-  background: transparent url('https://gw.alipayobjects.com/zos/antfincdn/1B3MOCiI5F/OtZslpOjYXijshDERXwc.svg') center / 14px no-repeat;
 }
 [data-theme='dark'] .code-box-riddle {
-  background: transparent url('https://gw.alipayobjects.com/zos/antfincdn/NByOhhT9rO/DlHbxMCyeuyOrqOdbgik.svg') center / 14px no-repeat;
 }
 [data-theme='dark'] .code-box-codesandbox {
-  background: transparent url('https://gw.alipayobjects.com/zos/antfincdn/hNEf2p1ZnS/aaYmtdDyHSCkXyLZVgGK.svg') center / 14px no-repeat;
 }
 [data-theme='dark'] ul.anticons-list li {
   color: #acacac;
@@ -3548,7 +3540,6 @@ ul.anticons-list li::after {
 [data-theme='dark'] [id^='components-grid-demo-'] .demo-row,
 [data-theme='dark'] .grid-demo .code-box-demo .demo-row,
 [data-theme='dark'] [id^='components-grid-demo-'] .code-box-demo .demo-row {
-  background-image: linear-gradient(90deg, #1d1d1d 4.16666667%, transparent 4.16666667%, transparent 8.33333333%, #1d1d1d 8.33333333%, #1d1d1d 12.5%, transparent 12.5%, transparent 16.66666667%, #1d1d1d 16.66666667%, #1d1d1d 20.83333333%, transparent 20.83333333%, transparent 25%, #1d1d1d 25%, #1d1d1d 29.16666667%, transparent 29.16666667%, transparent 33.33333333%, #1d1d1d 33.33333333%, #1d1d1d 37.5%, transparent 37.5%, transparent 41.66666667%, #1d1d1d 41.66666667%, #1d1d1d 45.83333333%, transparent 45.83333333%, transparent 50%, #1d1d1d 50%, #1d1d1d 54.16666667%, transparent 54.16666667%, transparent 58.33333333%, #1d1d1d 58.33333333%, #1d1d1d 62.5%, transparent 62.5%, transparent 66.66666667%, #1d1d1d 66.66666667%, #1d1d1d 70.83333333%, transparent 70.83333333%, transparent 75%, #1d1d1d 75%, #1d1d1d 79.16666667%, transparent 79.16666667%, transparent 83.33333333%, #1d1d1d 83.33333333%, #1d1d1d 87.5%, transparent 87.5%, transparent 91.66666667%, #1d1d1d 91.66666667%, #1d1d1d 95.83333333%, transparent 95.83333333%);
 }
 [data-theme='dark'] .grid-demo .code-box-demo .ant-row > div:not(.gutter-row),
 [data-theme='dark'] [id^='components-grid-demo-'] .code-box-demo .ant-row > div:not(.gutter-row) {
@@ -3690,7 +3681,6 @@ ul.anticons-list li::after {
 }
 .motion-example {
   color: #fff;
-  background: url(https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg) center / 180px;
   border-radius: 8px;
 }
 html {
@@ -3887,7 +3877,6 @@ html {
   background-color: rgba(0, 0, 0, 0.65);
 }
 .ant-back-top-icon {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAABGdBTUEAALGPC/xhBQAAAbtJREFUWAntmMtKw0AUhhMvS5cuxILgQlRUpIggIoKIIoigG1eC+AA+jo+i6FIXBfeuXIgoeKVeitVWJX5HWhhDksnUpp3FDPyZk3Nm5nycmZKkXhAEOXSA3lG7muTeRzmfy6HneUvIhnYkQK+Q9NhAA0Opg0vBEhjBKHiyb8iGMyQMOYuK41BcBSypAL+MYXSKjtFAW7EAGEO3qN4uMQbbAkXiSfRQJ1H6a+yhlkKRcAoVFYiweYNjtCVQJJpBz2GCiPt7fBOZQpFgDpUikse5HgnkM4Fi4QX0Fpc5wf9EbLqpUCy4jMoJSXWhFwbMNgWKhVbRhy5jirhs9fy/oFhgHVVTJEs7RLZ8sSEoJm6iz7SZDMbJ+/OKERQTttCXQRLToRUmrKWCYuA2+jbN0MB4OQobYShfdTCgn/sL1K36M7TLrN3n+758aPy2rrpR6+/od5E8tf/A1uLS9aId5T7J3CNYihkQ4D9PiMdMC7mp4rjB9kjFjZp8BlnVHJBuO1yFXIV0FdDF3RlyFdJVQBdv5AxVdIsq8apiZ2PyYO1EVykesGfZEESsCkweyR8MUW+V8uJ1gkYipmpdP1pm2aJVPEGzAAAAAElFTkSuQmCC) 100%/100% no-repeat;
 }
 .ant-badge {
   color: rgba(0, 0, 0, 0.65);
@@ -3992,7 +3981,6 @@ html {
   color: rgba(0, 0, 0, 0.45);
 }
 .ant-btn {
-  background-image: none;
   border: 1px solid transparent;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
   border-radius: 2px;
@@ -6252,6 +6240,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   background: #f5f5f5;
   border-color: #d9d9d9;
 }
+.ant-picker.ant-picker-disabled .ant-picker-suffix {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-picker.ant-picker-borderless {
   background-color: transparent !important;
   border-color: transparent !important;
@@ -6260,7 +6251,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-picker-input > input {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
   background: transparent;
@@ -6311,7 +6301,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   background: transparent;
 }
 .ant-picker-suffix {
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-picker-clear {
   color: rgba(0, 0, 0, 0.45);
@@ -6841,7 +6831,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-number {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
@@ -6951,7 +6940,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-affix-wrapper {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
@@ -7026,7 +7014,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
@@ -7383,7 +7370,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-mentions {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
@@ -7582,7 +7568,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
 .ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
 .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow::after {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
   border-radius: 2px;
 }
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
@@ -8038,7 +8023,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-pagination-options-quick-jumper input {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
-  background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
@@ -8986,9 +8970,10 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 }
 .ant-table-tbody > tr.ant-table-row-selected > td {
   background: color(~`colorPalette("@{primary-color}", 1)`);
+  border-color: rgba(0, 0, 0, 0.03);
 }
 .ant-table-tbody > tr.ant-table-row-selected:hover > td {
-  background: color(~`colorPalette("@{primary-color}", 1)`);
+  background: #dcf4ff;
 }
 .ant-table-tbody > tr .ant-table-wrapper:only-child .ant-table td {
   background: transparent;
@@ -9668,6 +9653,9 @@ tr.ant-table-expanded-row:hover > td {
 .ant-select-tree .ant-select-tree-treenode-active .ant-select-tree-node-content-wrapper {
   background: #f5f5f5;
 }
+.ant-select-tree .ant-select-tree-switcher-loading-icon {
+  color: @primary-color;
+}
 .ant-select-tree .ant-select-tree-node-content-wrapper {
   color: inherit;
   background: transparent;
@@ -9808,6 +9796,9 @@ tr.ant-table-expanded-row:hover > td {
 .ant-tree .ant-tree-treenode-active .ant-tree-node-content-wrapper {
   background: #f5f5f5;
 }
+.ant-tree .ant-tree-switcher-loading-icon {
+  color: @primary-color;
+}
 .ant-tree .ant-tree-node-content-wrapper {
   color: inherit;
   background: transparent;
@@ -9931,6 +9922,9 @@ h4.ant-typography,
 }
 .ant-upload.ant-upload-select-picture-card:hover {
   border-color: @primary-color;
+}
+.ant-upload-disabled.ant-upload.ant-upload-select-picture-card:hover {
+  border-color: #d9d9d9;
 }
 .ant-upload.ant-upload-drag {
   background: #fafafa;
@@ -10190,7 +10184,6 @@ body {
 [id^='components-grid-demo-'] .demo-row,
 .grid-demo .code-box-demo .demo-row,
 [id^='components-grid-demo-'] .code-box-demo .demo-row {
-  background-image: linear-gradient(90deg, #f5f5f5 4.16666667%, transparent 4.16666667%, transparent 8.33333333%, #f5f5f5 8.33333333%, #f5f5f5 12.5%, transparent 12.5%, transparent 16.66666667%, #f5f5f5 16.66666667%, #f5f5f5 20.83333333%, transparent 20.83333333%, transparent 25%, #f5f5f5 25%, #f5f5f5 29.16666667%, transparent 29.16666667%, transparent 33.33333333%, #f5f5f5 33.33333333%, #f5f5f5 37.5%, transparent 37.5%, transparent 41.66666667%, #f5f5f5 41.66666667%, #f5f5f5 45.83333333%, transparent 45.83333333%, transparent 50%, #f5f5f5 50%, #f5f5f5 54.16666667%, transparent 54.16666667%, transparent 58.33333333%, #f5f5f5 58.33333333%, #f5f5f5 62.5%, transparent 62.5%, transparent 66.66666667%, #f5f5f5 66.66666667%, #f5f5f5 70.83333333%, transparent 70.83333333%, transparent 75%, #f5f5f5 75%, #f5f5f5 79.16666667%, transparent 79.16666667%, transparent 83.33333333%, #f5f5f5 83.33333333%, #f5f5f5 87.5%, transparent 87.5%, transparent 91.66666667%, #f5f5f5 91.66666667%, #f5f5f5 95.83333333%, transparent 95.83333333%);
 }
 .grid-demo .ant-row > div,
 [id^='components-grid-demo-'] .ant-row > div,
@@ -10497,15 +10490,12 @@ pre[class*='language-'] {
   color: #52c41a !important;
 }
 .code-box-codepen {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/OtZslpOjYXijshDERXwc.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box-riddle {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/DlHbxMCyeuyOrqOdbgik.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box-codesandbox {
-  background: transparent url('https://gw.alipayobjects.com/zos/rmsportal/aaYmtdDyHSCkXyLZVgGK.svg') center / 14px no-repeat;
   border: 0;
 }
 .code-box pre code {
@@ -11021,7 +11011,6 @@ ul.anticons-list li::after {
 }
 .motion-example {
   color: #fff;
-  background: url(https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg) center / 180px;
   border-radius: 8px;
 }
 .algolia-autocomplete .ds-dropdown-menu {
