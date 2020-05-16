@@ -2179,6 +2179,7 @@ this.tinycolor = tinycolor;
   0 5px 12px 4px rgba(0, 0, 0, 0.09);
 @card-radius: @border-radius-base;
 @card-head-tabs-margin-bottom: -17px;
+@card-head-extra-color: @text-color;
 
 // Comment
 // ---
@@ -6184,6 +6185,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-picker-today-btn:active {
   color: color(~`colorPalette("@{primary-color}", 7)`);
 }
+.ant-picker-today-btn.ant-picker-today-btn-disabled {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-picker-year-panel .ant-picker-cell-range-hover-start::after,
 .ant-picker-quarter-panel .ant-picker-cell-range-hover-start::after,
 .ant-picker-month-panel .ant-picker-cell-range-hover-start::after {
@@ -7763,7 +7767,8 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 }
 .ant-menu-dark .ant-menu-item,
 .ant-menu-dark .ant-menu-item-group-title,
-.ant-menu-dark .ant-menu-item > a {
+.ant-menu-dark .ant-menu-item > a,
+.ant-menu-dark .ant-menu-item > span > a {
   color: rgba(255, 255, 255, 0.65);
 }
 .ant-menu-dark.ant-menu-inline,
@@ -7798,7 +7803,13 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-menu-dark .ant-menu-submenu-active > a,
 .ant-menu-dark .ant-menu-submenu-open > a,
 .ant-menu-dark .ant-menu-submenu-selected > a,
-.ant-menu-dark .ant-menu-submenu-title:hover > a {
+.ant-menu-dark .ant-menu-submenu-title:hover > a,
+.ant-menu-dark .ant-menu-item:hover > span > a,
+.ant-menu-dark .ant-menu-item-active > span > a,
+.ant-menu-dark .ant-menu-submenu-active > span > a,
+.ant-menu-dark .ant-menu-submenu-open > span > a,
+.ant-menu-dark .ant-menu-submenu-selected > span > a,
+.ant-menu-dark .ant-menu-submenu-title:hover > span > a {
   color: #fff;
 }
 .ant-menu-dark .ant-menu-item:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow::after,
@@ -7841,7 +7852,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   border-right: 0;
 }
 .ant-menu-dark .ant-menu-item-selected > a,
-.ant-menu-dark .ant-menu-item-selected > a:hover {
+.ant-menu-dark .ant-menu-item-selected > span > a,
+.ant-menu-dark .ant-menu-item-selected > a:hover,
+.ant-menu-dark .ant-menu-item-selected > span > a:hover {
   color: #fff;
 }
 .ant-menu-dark .ant-menu-item-selected .anticon {
@@ -7857,7 +7870,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-menu-dark .ant-menu-item-disabled,
 .ant-menu-dark .ant-menu-submenu-disabled,
 .ant-menu-dark .ant-menu-item-disabled > a,
-.ant-menu-dark .ant-menu-submenu-disabled > a {
+.ant-menu-dark .ant-menu-submenu-disabled > a,
+.ant-menu-dark .ant-menu-item-disabled > span > a,
+.ant-menu-dark .ant-menu-submenu-disabled > span > a {
   color: rgba(255, 255, 255, 0.35) !important;
 }
 .ant-menu-dark .ant-menu-item-disabled > .ant-menu-submenu-title,
@@ -7875,9 +7890,12 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   border-right: none;
   border-left: 1px solid #f0f0f0;
 }
-.ant-menu-rtl.ant-menu-dark .ant-menu-inline,
-.ant-menu-rtl.ant-menu-dark .ant-menu-vertical {
+.ant-menu-rtl.ant-menu-dark.ant-menu-inline,
+.ant-menu-rtl.ant-menu-dark.ant-menu-vertical {
   border-left: none;
+}
+.ant-menu-sub.ant-menu-inline {
+  border: 0;
 }
 .ant-message {
   color: rgba(0, 0, 0, 0.65);
@@ -8143,6 +8161,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 }
 .ant-pagination-simple .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-simple .ant-pagination-next .ant-pagination-item-link {
+  background-color: transparent;
   border: 0;
 }
 .ant-pagination-simple .ant-pagination-simple-pager input {
@@ -9763,10 +9782,6 @@ tr.ant-table-expanded-row:hover > td {
 }
 .ant-select-tree-show-line .ant-select-tree-switcher {
   background: #fff;
-}
-.ant-select-tree-rtl.ant-select-tree-show-line .ant-select-tree-indent-unit::before {
-  border-right: none;
-  border-left: 1px solid #d9d9d9;
 }
 .ant-tree.ant-tree-directory .ant-tree-treenode:hover::before {
   background: #f5f5f5;
