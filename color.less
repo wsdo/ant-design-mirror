@@ -2247,13 +2247,15 @@ this.tinycolor = tinycolor;
 @switch-sm-height: 16px;
 @switch-min-width: 44px;
 @switch-sm-min-width: 28px;
-@switch-sm-checked-margin-left: -(@switch-sm-height - 3px);
 @switch-disabled-opacity: 0.4;
 @switch-color: @primary-color;
 @switch-bg: @component-background;
 @switch-shadow-color: fade(#00230b, 20%);
-@switch-inner-margin-min: 6px;
-@switch-inner-margin-max: 24px;
+@switch-padding: 2px;
+@switch-inner-margin-min: ceil(@switch-height * 0.3);
+@switch-inner-margin-max: ceil(@switch-height * 1.1);
+@switch-sm-inner-margin-min: ceil(@switch-sm-height * 0.3);
+@switch-sm-inner-margin-max: ceil(@switch-sm-height * 1.1);
 
 // Pagination
 // ---
@@ -5877,6 +5879,9 @@ html {
 .ant-cascader-menu-item-disabled:hover {
   background: transparent;
 }
+.ant-cascader-menu-empty .ant-cascader-menu-item {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
   background-color: color(~`colorPalette("@{primary-color}", 1)`);
@@ -8602,8 +8607,12 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
   border-radius: 2px;
   box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
+.ant-select-dropdown-empty {
+  color: rgba(0, 0, 0, 0.25);
+}
 .ant-select-item-empty {
   color: rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-select-item {
   color: rgba(0, 0, 0, 0.65);
@@ -8969,30 +8978,13 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-switch {
   color: rgba(0, 0, 0, 0.65);
   background-color: rgba(0, 0, 0, 0.25);
-  border: 1px solid transparent;
+  border: 0;
   border-radius: 100px;
 }
-.ant-switch-inner {
-  color: #fff;
-}
-.ant-switch-loading-icon,
-.ant-switch::after {
-  background-color: #fff;
-  border-radius: 18px;
-}
-.ant-switch::after {
-  box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
-}
-.ant-switch-loading-icon {
-  background: transparent;
-}
-.ant-switch-loading .ant-switch-loading-icon {
-  color: rgba(0, 0, 0, 0.65);
-}
-.ant-switch-checked.ant-switch-loading .ant-switch-loading-icon {
-  color: @primary-color;
-}
 .ant-switch:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.ant-switch-checked:focus {
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 }
 .ant-switch:focus:hover {
@@ -9000,6 +8992,24 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 }
 .ant-switch-checked {
   background-color: @primary-color;
+}
+.ant-switch-loading *,
+.ant-switch-disabled * {
+  box-shadow: none;
+}
+.ant-switch-inner {
+  color: #fff;
+}
+.ant-switch-handle::before {
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+}
+.ant-switch-loading-icon {
+  color: rgba(0, 0, 0, 0.65);
+}
+.ant-switch-checked .ant-switch-loading-icon {
+  color: @primary-color;
 }
 .ant-table-small .ant-table-thead > tr > th {
   background-color: #fafafa;
@@ -9169,6 +9179,9 @@ td.ant-table-column-sort {
 tr.ant-table-expanded-row > td,
 tr.ant-table-expanded-row:hover > td {
   background: #fbfbfb;
+}
+.ant-table-empty .ant-table-tbody > tr.ant-table-placeholder {
+  color: rgba(0, 0, 0, 0.25);
 }
 .ant-table-tbody > tr.ant-table-placeholder:hover > td {
   background: #fff;
