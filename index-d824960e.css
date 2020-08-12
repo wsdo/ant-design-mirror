@@ -124,6 +124,7 @@ html {
 @-ms-viewport {
   width: device-width;
 }
+
 body {
   margin: 0;
   color: rgba(0, 0, 0, 0.65);
