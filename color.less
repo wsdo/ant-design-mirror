@@ -93,40 +93,26 @@ html {--antd-wave-shadow-color: @primary-color;}
 .ant-badge-status-purple {background: #722ed1;}
 .ant-badge-status-text {color: rgba(0, 0, 0, 0.85);}
 .ant-ribbon {color: rgba(0, 0, 0, 0.85);color: #fff;background-color: @primary-color;border-radius: 2px;}
-.ant-ribbon-corner {color: @primary-color;border: 4px solid;}
+.ant-ribbon-text {color: #fff;}
+.ant-ribbon-corner {color: currentColor;border: 4px solid;}
 .ant-ribbon-corner::after {color: rgba(0, 0, 0, 0.25);border: inherit;}
-.ant-ribbon-color-pink {background-color: #eb2f96;}
-.ant-ribbon-color-pink .ant-ribbon-corner {color: #eb2f96;}
-.ant-ribbon-color-magenta {background-color: #eb2f96;}
-.ant-ribbon-color-magenta .ant-ribbon-corner {color: #eb2f96;}
-.ant-ribbon-color-red {background-color: #f5222d;}
-.ant-ribbon-color-red .ant-ribbon-corner {color: #f5222d;}
-.ant-ribbon-color-volcano {background-color: #fa541c;}
-.ant-ribbon-color-volcano .ant-ribbon-corner {color: #fa541c;}
-.ant-ribbon-color-orange {background-color: #fa8c16;}
-.ant-ribbon-color-orange .ant-ribbon-corner {color: #fa8c16;}
-.ant-ribbon-color-yellow {background-color: #fadb14;}
-.ant-ribbon-color-yellow .ant-ribbon-corner {color: #fadb14;}
-.ant-ribbon-color-gold {background-color: #faad14;}
-.ant-ribbon-color-gold .ant-ribbon-corner {color: #faad14;}
-.ant-ribbon-color-cyan {background-color: #13c2c2;}
-.ant-ribbon-color-cyan .ant-ribbon-corner {color: #13c2c2;}
-.ant-ribbon-color-lime {background-color: #a0d911;}
-.ant-ribbon-color-lime .ant-ribbon-corner {color: #a0d911;}
-.ant-ribbon-color-green {background-color: #52c41a;}
-.ant-ribbon-color-green .ant-ribbon-corner {color: #52c41a;}
-.ant-ribbon-color-blue {background-color: #1890ff;}
-.ant-ribbon-color-blue .ant-ribbon-corner {color: #1890ff;}
-.ant-ribbon-color-geekblue {background-color: #2f54eb;}
-.ant-ribbon-color-geekblue .ant-ribbon-corner {color: #2f54eb;}
-.ant-ribbon-color-purple {background-color: #722ed1;}
-.ant-ribbon-color-purple .ant-ribbon-corner {color: #722ed1;}
+.ant-ribbon-color-pink {color: #eb2f96;background: #eb2f96;}
+.ant-ribbon-color-magenta {color: #eb2f96;background: #eb2f96;}
+.ant-ribbon-color-red {color: #f5222d;background: #f5222d;}
+.ant-ribbon-color-volcano {color: #fa541c;background: #fa541c;}
+.ant-ribbon-color-orange {color: #fa8c16;background: #fa8c16;}
+.ant-ribbon-color-yellow {color: #fadb14;background: #fadb14;}
+.ant-ribbon-color-gold {color: #faad14;background: #faad14;}
+.ant-ribbon-color-cyan {color: #13c2c2;background: #13c2c2;}
+.ant-ribbon-color-lime {color: #a0d911;background: #a0d911;}
+.ant-ribbon-color-green {color: #52c41a;background: #52c41a;}
+.ant-ribbon-color-blue {color: #1890ff;background: #1890ff;}
+.ant-ribbon-color-geekblue {color: #2f54eb;background: #2f54eb;}
+.ant-ribbon-color-purple {color: #722ed1;background: #722ed1;}
 .ant-ribbon.ant-ribbon-placement-end {border-bottom-right-radius: 0;}
 .ant-ribbon.ant-ribbon-placement-end .ant-ribbon-corner {border-color: currentColor transparent transparent currentColor;}
-.ant-ribbon.ant-ribbon-placement-end .ant-ribbon-corner::after {border-color: currentColor transparent transparent currentColor;}
 .ant-ribbon.ant-ribbon-placement-start {border-bottom-left-radius: 0;}
 .ant-ribbon.ant-ribbon-placement-start .ant-ribbon-corner {border-color: currentColor currentColor transparent transparent;}
-.ant-ribbon.ant-ribbon-placement-start .ant-ribbon-corner::after {border-color: currentColor currentColor transparent transparent;}
 .ant-ribbon-rtl.ant-ribbon-placement-end {border-bottom-right-radius: 2px;border-bottom-left-radius: 0;}
 .ant-ribbon-rtl.ant-ribbon-placement-end .ant-ribbon-corner {border-color: currentColor currentColor transparent transparent;}
 .ant-ribbon-rtl.ant-ribbon-placement-end .ant-ribbon-corner::after {border-color: currentColor currentColor transparent transparent;}
@@ -261,9 +247,9 @@ html {--antd-wave-shadow-color: @primary-color;}
 .ant-btn-round {border-radius: 32px;}
 .ant-btn-round.ant-btn-lg {border-radius: 40px;}
 .ant-btn-round.ant-btn-sm {border-radius: 24px;}
-.ant-btn-circle, .ant-btn-circle-outline {border-radius: 50%;}
-.ant-btn-circle.ant-btn-lg, .ant-btn-circle-outline.ant-btn-lg {border-radius: 50%;}
-.ant-btn-circle.ant-btn-sm, .ant-btn-circle-outline.ant-btn-sm {border-radius: 50%;}
+.ant-btn-circle {border-radius: 50%;}
+.ant-btn-circle.ant-btn-lg {border-radius: 50%;}
+.ant-btn-circle.ant-btn-sm {border-radius: 50%;}
 .ant-btn::before {background: #fff;border-radius: inherit;}
 .ant-btn-group-lg > .ant-btn, .ant-btn-group-lg > span > .ant-btn {border-radius: 0;}
 .ant-btn-group-sm > .ant-btn, .ant-btn-group-sm > span > .ant-btn {border-radius: 0;}
@@ -532,7 +518,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-descriptions-bordered .ant-descriptions-row:last-child {border-bottom: none;}
 .ant-divider {color: rgba(0, 0, 0, 0.85);border-top: 1px solid rgba(0, 0, 0, 0.06);}
 .ant-divider-vertical {border-top: 0;border-left: 1px solid rgba(0, 0, 0, 0.06);}
-.ant-divider-horizontal.ant-divider-with-text {color: rgba(0, 0, 0, 0.85);border-color: rgba(0, 0, 0, 0.06);border-top: 0;}
+.ant-divider-horizontal.ant-divider-with-text {color: rgba(0, 0, 0, 0.85);border-top: 0;border-top-color: rgba(0, 0, 0, 0.06);}
 .ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after {border-top: 1px solid transparent;border-top-color: inherit;border-bottom: 0;}
 .ant-divider-dashed {background: none;border-color: rgba(0, 0, 0, 0.06);border-style: dashed;border-width: 1px 0 0;}
 .ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed {border-top: 0;}
@@ -587,43 +573,43 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-form-item-explain.ant-form-item-explain-warning {color: #faad14;}
 .ant-form-item-has-success.ant-form-item-has-feedback .ant-form-item-children-icon {color: #52c41a;}
 .ant-form-item-has-warning .ant-form-item-split {color: #faad14;}
-.ant-form-item-has-warning .ant-input, .ant-form-item-has-warning .ant-input-affix-wrapper, .ant-form-item-has-warning .ant-input:hover, .ant-form-item-has-warning .ant-input-affix-wrapper:hover {border-color: #faad14;}
+.ant-form-item-has-warning .ant-input, .ant-form-item-has-warning .ant-input-affix-wrapper, .ant-form-item-has-warning .ant-input:hover, .ant-form-item-has-warning .ant-input-affix-wrapper:hover {background-color: #fff;border-color: #faad14;}
 .ant-form-item-has-warning .ant-input:focus, .ant-form-item-has-warning .ant-input-affix-wrapper:focus, .ant-form-item-has-warning .ant-input-focused, .ant-form-item-has-warning .ant-input-affix-wrapper-focused {border-color: #ffc53d;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);}
-.ant-form-item-has-warning .ant-input:not(.ant-form-item-has-warning .ant-input-disabled) {background-color: #fff;}
-.ant-form-item-has-warning .ant-input-affix-wrapper:not(.ant-form-item-has-warning .ant-input-affix-wrapper-disabled) {background-color: #fff;}
-.ant-form-item-has-warning .ant-input-affix-wrapper input:focus {box-shadow: none !important;}
+.ant-form-item-has-warning .ant-input-disabled {background-color: #f5f5f5;border-color: #d9d9d9;}
+.ant-form-item-has-warning .ant-input-affix-wrapper-disabled {background-color: #f5f5f5;border-color: #d9d9d9;}
+.ant-form-item-has-warning .ant-input-affix-wrapper-disabled input:focus {box-shadow: none !important;}
 .ant-form-item-has-warning .ant-calendar-picker-open .ant-calendar-picker-input {border-color: #ffc53d;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);}
 .ant-form-item-has-warning .ant-input-prefix {color: #faad14;}
 .ant-form-item-has-warning .ant-input-group-addon {color: #faad14;border-color: #faad14;}
 .ant-form-item-has-warning .has-feedback {color: #faad14;}
 .ant-form-item-has-warning.ant-form-item-has-feedback .ant-form-item-children-icon {color: #faad14;}
-.ant-form-item-has-warning .ant-select:not(.ant-select-borderless) .ant-select-selector {border-color: #faad14 !important;}
+.ant-form-item-has-warning .ant-select:not(.ant-select-borderless) .ant-select-selector {background-color: #fff;border-color: #faad14 !important;}
 .ant-form-item-has-warning .ant-select:not(.ant-select-borderless).ant-select-open .ant-select-selector, .ant-form-item-has-warning .ant-select:not(.ant-select-borderless).ant-select-focused .ant-select-selector {border-color: #ffc53d;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);}
-.ant-form-item-has-warning .ant-input-number, .ant-form-item-has-warning .ant-picker {border-color: #faad14;}
+.ant-form-item-has-warning .ant-input-number, .ant-form-item-has-warning .ant-picker {background-color: #fff;border-color: #faad14;}
 .ant-form-item-has-warning .ant-input-number-focused, .ant-form-item-has-warning .ant-picker-focused, .ant-form-item-has-warning .ant-input-number:focus, .ant-form-item-has-warning .ant-picker:focus {border-color: #ffc53d;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);}
-.ant-form-item-has-warning .ant-input-number:not([disabled]):hover, .ant-form-item-has-warning .ant-picker:not([disabled]):hover {border-color: #faad14;}
+.ant-form-item-has-warning .ant-input-number:not([disabled]):hover, .ant-form-item-has-warning .ant-picker:not([disabled]):hover {background-color: #fff;border-color: #faad14;}
 .ant-form-item-has-warning .ant-cascader-picker:focus .ant-cascader-input {border-color: #ffc53d;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);}
 .ant-form-item-has-error .ant-form-item-split {color: #ff4d4f;}
-.ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover {border-color: #ff4d4f;}
+.ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover {background-color: #fff;border-color: #ff4d4f;}
 .ant-form-item-has-error .ant-input:focus, .ant-form-item-has-error .ant-input-affix-wrapper:focus, .ant-form-item-has-error .ant-input-focused, .ant-form-item-has-error .ant-input-affix-wrapper-focused {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
-.ant-form-item-has-error .ant-input:not(.ant-form-item-has-error .ant-input-disabled) {background-color: #fff;}
-.ant-form-item-has-error .ant-input-affix-wrapper:not(.ant-form-item-has-error .ant-input-affix-wrapper-disabled) {background-color: #fff;}
-.ant-form-item-has-error .ant-input-affix-wrapper input:focus {box-shadow: none !important;}
+.ant-form-item-has-error .ant-input-disabled {background-color: #f5f5f5;border-color: #d9d9d9;}
+.ant-form-item-has-error .ant-input-affix-wrapper-disabled {background-color: #f5f5f5;border-color: #d9d9d9;}
+.ant-form-item-has-error .ant-input-affix-wrapper-disabled input:focus {box-shadow: none !important;}
 .ant-form-item-has-error .ant-calendar-picker-open .ant-calendar-picker-input {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
 .ant-form-item-has-error .ant-input-prefix {color: #ff4d4f;}
 .ant-form-item-has-error .ant-input-group-addon {color: #ff4d4f;border-color: #ff4d4f;}
 .ant-form-item-has-error .has-feedback {color: #ff4d4f;}
 .ant-form-item-has-error.ant-form-item-has-feedback .ant-form-item-children-icon {color: #ff4d4f;}
-.ant-form-item-has-error .ant-select:not(.ant-select-borderless) .ant-select-selector {border-color: #ff4d4f !important;}
+.ant-form-item-has-error .ant-select:not(.ant-select-borderless) .ant-select-selector {background-color: #fff;border-color: #ff4d4f !important;}
 .ant-form-item-has-error .ant-select:not(.ant-select-borderless).ant-select-open .ant-select-selector, .ant-form-item-has-error .ant-select:not(.ant-select-borderless).ant-select-focused .ant-select-selector {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
 .ant-form-item-has-error .ant-input-group-addon .ant-select.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {border: 0;}
 .ant-form-item-has-error .ant-select.ant-select-auto-complete .ant-input:focus {border-color: #ff4d4f;}
-.ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-picker {border-color: #ff4d4f;}
+.ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-picker {background-color: #fff;border-color: #ff4d4f;}
 .ant-form-item-has-error .ant-input-number-focused, .ant-form-item-has-error .ant-picker-focused, .ant-form-item-has-error .ant-input-number:focus, .ant-form-item-has-error .ant-picker:focus {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
-.ant-form-item-has-error .ant-input-number:not([disabled]):hover, .ant-form-item-has-error .ant-picker:not([disabled]):hover {border-color: #ff4d4f;}
-.ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor, .ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):hover {border-color: #ff4d4f;}
+.ant-form-item-has-error .ant-input-number:not([disabled]):hover, .ant-form-item-has-error .ant-picker:not([disabled]):hover {background-color: #fff;border-color: #ff4d4f;}
+.ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor, .ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):hover {background-color: #fff;border-color: #ff4d4f;}
 .ant-form-item-has-error .ant-mention-wrapper.ant-mention-active:not([disabled]) .ant-mention-editor, .ant-form-item-has-error .ant-mention-wrapper .ant-mention-editor:not([disabled]):focus {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
-.ant-form-item-has-error .ant-cascader-picker:focus .ant-cascader-input {border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
+.ant-form-item-has-error .ant-cascader-picker:focus .ant-cascader-input {background-color: #fff;border-color: #ff7875;border-right-width: 1px !important;box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);}
 .ant-form-item-has-error .ant-transfer-list {border-color: #ff4d4f;}
 .ant-form-item-has-error .ant-transfer-list-search:not([disabled]) {border-color: #d9d9d9;}
 .ant-form-item-has-error .ant-transfer-list-search:not([disabled]):hover {border-color: color(~`colorPalette("@{primary-color}", 5)`);border-right-width: 1px !important;}
@@ -662,9 +648,6 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-clear-icon:hover {color: rgba(0, 0, 0, 0.45);}
 .ant-input-clear-icon:active {color: rgba(0, 0, 0, 0.85);}
 .ant-input-affix-wrapper-textarea-with-clear-btn {border: 0 !important;}
-.ant-input-textarea-clear-icon {color: rgba(0, 0, 0, 0.25);}
-.ant-input-textarea-clear-icon:hover {color: rgba(0, 0, 0, 0.45);}
-.ant-input-textarea-clear-icon:active {color: rgba(0, 0, 0, 0.85);}
 .ant-input {color: rgba(0, 0, 0, 0.85);background-color: #fff;background-image: none;border: 1px solid #d9d9d9;border-radius: 2px;}
 .ant-input::placeholder {color: #bfbfbf;}
 .ant-input:hover {border-color: color(~`colorPalette("@{primary-color}", 5)`);border-right-width: 1px !important;}
@@ -696,9 +679,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-group.ant-input-group-compact-addon:not(:first-child):not(:last-child), .ant-input-group.ant-input-group-compact-wrap:not(:first-child):not(:last-child), .ant-input-group.ant-input-group-compact > .ant-input:not(:first-child):not(:last-child) {border-right-width: 1px;}
 .ant-input-group.ant-input-group-compact > * {border-radius: 0;}
 .ant-input-group.ant-input-group-compact > *:not(:last-child) {border-right-width: 1px;}
-.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-calendar-picker .ant-input, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input, .ant-input-group.ant-input-group-compact > .ant-mention-wrapper .ant-mention-editor, .ant-input-group.ant-input-group-compact > .ant-time-picker .ant-time-picker-input, .ant-input-group.ant-input-group-compact > .ant-input-group-wrapper .ant-input {border-right-width: 1px;border-radius: 0;}
-.ant-input-group.ant-input-group-compact > *:first-child, .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-calendar-picker:first-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-mention-wrapper:first-child .ant-mention-editor, .ant-input-group.ant-input-group-compact > .ant-time-picker:first-child .ant-time-picker-input {border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
-.ant-input-group.ant-input-group-compact > *:last-child, .ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor, .ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input {border-right-width: 1px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;}
+.ant-input-group.ant-input-group-compact > .ant-select > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker .ant-input, .ant-input-group.ant-input-group-compact > .ant-input-group-wrapper .ant-input {border-right-width: 1px;border-radius: 0;}
+.ant-input-group.ant-input-group-compact > *:first-child, .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input {border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
+.ant-input-group.ant-input-group-compact > *:last-child, .ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input {border-right-width: 1px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;}
 .ant-input-group > .ant-input-rtl:first-child, .ant-input-group-rtl .ant-input-group-addon:first-child {border-radius: 0 2px 2px 0;}
 .ant-input-group-rtl .ant-input-group-addon:first-child {border-right: 1px solid #d9d9d9;border-left: 0;}
 .ant-input-group-rtl .ant-input-group-addon:last-child {border-right: 0;border-left: 1px solid #d9d9d9;}
@@ -706,28 +689,24 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-group-rtl.ant-input-group .ant-input-affix-wrapper:not(:first-child) {border-radius: 2px 0 0 2px;}
 .ant-input-group-rtl.ant-input-group .ant-input-affix-wrapper:not(:last-child) {border-radius: 0 2px 2px 0;}
 .ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:not(:last-child) {border-left-width: 1px;}
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:first-child, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selector, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-calendar-picker:first-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:first-child .ant-mention-editor, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-time-picker:first-child .ant-time-picker-input {border-radius: 0 2px 2px 0;}
-.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:last-child, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-calendar-picker:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-mention-wrapper:last-child .ant-mention-editor, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-time-picker:last-child .ant-time-picker-input {border-left-width: 1px;border-radius: 2px 0 0 2px;}
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:first-child, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selector, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input {border-radius: 0 2px 2px 0;}
+.ant-input-group-rtl.ant-input-group.ant-input-group-compact > *:last-child, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-select-auto-complete:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input, .ant-input-group-rtl.ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input {border-left-width: 1px;border-radius: 2px 0 0 2px;}
 .ant-input-password-icon {color: rgba(0, 0, 0, 0.45);}
 .ant-input-password-icon:hover {color: rgba(0, 0, 0, 0.85);}
-.ant-input-textarea-show-count::after {color: #d9d9d9;}
-.ant-input-search-icon {color: rgba(0, 0, 0, 0.45);}
-.ant-input-search-icon:hover {color: rgba(0, 0, 0, 0.85);}
-.ant-input-search-icon::before {border-left: 1px solid #d9d9d9;}
-.ant-input-search-enter-button input {border-right: 0;}
-.ant-input-search-enter-button input:hover, .ant-input-search-enter-button input:focus {border-color: color(~`colorPalette("@{primary-color}", 5)`);}
-.ant-input-search-enter-button.ant-input-affix-wrapper {border-right: 0;}
-.ant-input-search-enter-button + .ant-input-group-addon, .ant-input-search-enter-button input + .ant-input-group-addon {border: 0;}
-.ant-input-search-enter-button + .ant-input-group-addon .ant-input-search-button, .ant-input-search-enter-button input + .ant-input-group-addon .ant-input-search-button {border-top-left-radius: 0;border-bottom-left-radius: 0;}
+.ant-input-textarea-show-count::after {color: rgba(0, 0, 0, 0.45);}
+.ant-input-search .ant-input {border-right: 0;}
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {border-color: color(~`colorPalette("@{primary-color}", 5)`);}
+.ant-input-search .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {border-left-color: color(~`colorPalette("@{primary-color}", 5)`);}
+.ant-input-search > .ant-input-group > .ant-input-affix-wrapper {border-right: 0;}
+.ant-input-search > .ant-input-group > .ant-input-group-addon {border: 0;}
+.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button {border-radius: 0 2px 2px 0;}
+.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {color: rgba(0, 0, 0, 0.45);}
 .ant-input-affix-wrapper.ant-input-affix-wrapper-rtl > input.ant-input {border: none;}
-.ant-input-search-rtl .ant-input-search-icon::before {border-left: none;}
-.ant-input-search-rtl .ant-input-search-icon::after {border-right: 1px solid #d9d9d9;}
-.ant-input-search-rtl.ant-input-search-enter-button input {border-right: 1px solid #d9d9d9;border-left: 0;}
-.ant-input-search-rtl.ant-input-search-enter-button input:hover, .ant-input-search-rtl.ant-input-search-enter-button input:focus {border-color: color(~`colorPalette("@{primary-color}", 5)`);}
-.ant-input-search-rtl.ant-input-search-enter-button.ant-input-affix-wrapper {border-right: 1px solid #d9d9d9;border-left: 0;}
-.ant-input-search-rtl.ant-input-search-enter-button.ant-input-affix-wrapper:hover, .ant-input-search-rtl.ant-input-search-enter-button.ant-input-affix-wrapper:focus {border-color: color(~`colorPalette("@{primary-color}", 5)`);}
-.ant-input-search-rtl.ant-input-search-enter-button + .ant-input-group-addon, .ant-input-search-rtl.ant-input-search-enter-button input + .ant-input-group-addon {border: 0;}
-.ant-input-search-rtl.ant-input-search-enter-button + .ant-input-group-addon .ant-input-search-button, .ant-input-search-rtl.ant-input-search-enter-button input + .ant-input-group-addon .ant-input-search-button {border-radius: 2px 0 0 2px;}
+.ant-input-search-rtl .ant-input {border-right: 1px solid #d9d9d9;border-left: 0;}
+.ant-input-search-rtl .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search-rtl .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {border-right-color: color(~`colorPalette("@{primary-color}", 5)`);border-left-color: #d9d9d9;}
+.ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper {border-right: 1px solid #d9d9d9;border-left: 0;}
+.ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper:hover, .ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper-focused {border-right-color: color(~`colorPalette("@{primary-color}", 5)`);}
+.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon .ant-input-search-button {border-radius: 2px 0 0 2px;}
 .ant-input-number {color: rgba(0, 0, 0, 0.85);background-color: #fff;background-image: none;border: 1px solid #d9d9d9;border-radius: 2px;}
 .ant-input-number::placeholder {color: #bfbfbf;}
 .ant-input-number:hover {border-color: color(~`colorPalette("@{primary-color}", 5)`);border-right-width: 1px !important;}
@@ -1473,6 +1452,9 @@ tr.ant-table-expanded-row:hover > td {background: #fbfbfb;}
 .ant-typography.ant-typography-success {color: #52c41a;}
 .ant-typography.ant-typography-warning {color: #faad14;}
 .ant-typography.ant-typography-danger {color: #ff4d4f;}
+a.ant-typography.ant-typography-danger:active,
+a.ant-typography.ant-typography-danger:focus,
+a.ant-typography.ant-typography-danger:hover {color: #ff7875;}
 .ant-typography.ant-typography-disabled {color: rgba(0, 0, 0, 0.25);}
 h1.ant-typography, .ant-typography h1 {color: rgba(0, 0, 0, 0.85);}
 h2.ant-typography, .ant-typography h2 {color: rgba(0, 0, 0, 0.85);}
@@ -1492,6 +1474,9 @@ a.ant-typography[disabled], .ant-typography a[disabled] {color: rgba(0, 0, 0, 0.
 .ant-typography-expand:active, .ant-typography-edit:active, .ant-typography-copy:active {color: color(~`colorPalette("@{primary-color}", 7)`);}
 .ant-typography-copy-success, .ant-typography-copy-success:hover, .ant-typography-copy-success:focus {color: #52c41a;}
 .ant-typography-edit-content-confirm {color: rgba(0, 0, 0, 0.45);}
+.ant-typography pre {background: rgba(150, 150, 150, 0.1);border: 1px solid rgba(100, 100, 100, 0.2);border-radius: 3px;}
+.ant-typography pre code {border: 0;}
+.ant-typography blockquote {border-left: 4px solid rgba(100, 100, 100, 0.2);}
 .ant-upload {color: rgba(0, 0, 0, 0.85);}
 .ant-upload.ant-upload-select-picture-card {background-color: #fafafa;border: 1px dashed #d9d9d9;border-radius: 2px;}
 .ant-upload.ant-upload-select-picture-card:hover {border-color: @primary-color;}
