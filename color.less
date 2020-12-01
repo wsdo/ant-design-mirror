@@ -1,5 +1,4 @@
 @primary-color: #1890ff;
-.ant-modal-mask, .ant-image-preview-mask {background-color: rgba(0, 0, 0, 0.45);}
 html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 body {color: rgba(0, 0, 0, 0.85);background-color: #fff;}
 h1,
@@ -594,6 +593,8 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-descriptions-bordered .ant-descriptions-item-label {background-color: #fafafa;}
 .ant-descriptions-bordered .ant-descriptions-row {border-bottom: 1px solid #f0f0f0;}
 .ant-descriptions-bordered .ant-descriptions-row:last-child {border-bottom: none;}
+.ant-descriptions-rtl.ant-descriptions-bordered .ant-descriptions-item-label, .ant-descriptions-rtl.ant-descriptions-bordered .ant-descriptions-item-content {border-right: none;border-left: 1px solid #f0f0f0;}
+.ant-descriptions-rtl.ant-descriptions-bordered .ant-descriptions-item-label:last-child, .ant-descriptions-rtl.ant-descriptions-bordered .ant-descriptions-item-content:last-child {border-left: none;}
 .ant-divider {color: rgba(0, 0, 0, 0.85);border-top: 1px solid rgba(0, 0, 0, 0.06);}
 .ant-divider-vertical {border-top: 0;border-left: 1px solid rgba(0, 0, 0, 0.06);}
 .ant-divider-horizontal.ant-divider-with-text {color: rgba(0, 0, 0, 0.85);border-top: 0;border-top-color: rgba(0, 0, 0, 0.06);}
@@ -708,6 +709,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-form-item-label > label .ant-form-item-tooltip {color: rgba(0, 0, 0, 0.45);}
 .ant-form-item-explain, .ant-form-item-extra {color: rgba(0, 0, 0, 0.45);}
 .ant-image-img-placeholder {background-color: #f5f5f5;background-repeat: no-repeat;background-position: center center;background-size: 30%;}
+.ant-image-preview-mask {background-color: rgba(0, 0, 0, 0.45);}
 .ant-image-preview-operations {color: rgba(0, 0, 0, 0.85);color: rgba(255, 255, 255, 0.85);background: fade(@modal-mask-bg, 10%);}
 .ant-image-preview-operations-operation-disabled {color: fade(@image-preview-operation-color, 45%);}
 .ant-input-affix-wrapper {color: rgba(0, 0, 0, 0.85);background-color: #fff;background-image: none;border: 1px solid #d9d9d9;border-radius: 2px;}
@@ -784,9 +786,9 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {border-color: color(~`colorPalette("@{primary-color}", 5)`);}
 .ant-input-search .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {border-left-color: color(~`colorPalette("@{primary-color}", 5)`);}
 .ant-input-search .ant-input-affix-wrapper {border-radius: 0;}
-.ant-input-search > .ant-input-group > .ant-input-group-addon {border: 0;}
-.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button {border-radius: 0 2px 2px 0;}
-.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {color: rgba(0, 0, 0, 0.45);}
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child {border: 0;}
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {border-radius: 0 2px 2px 0;}
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {color: rgba(0, 0, 0, 0.45);}
 .ant-input-affix-wrapper.ant-input-affix-wrapper-rtl > input.ant-input {border: none;}
 .ant-input-search-rtl .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search-rtl .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {border-right-color: color(~`colorPalette("@{primary-color}", 5)`);border-left-color: #d9d9d9;}
 .ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper:hover, .ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper-focused {border-right-color: color(~`colorPalette("@{primary-color}", 5)`);}
@@ -947,8 +949,8 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-menu-dark .ant-menu-item-selected {color: #fff;border-right: 0;}
 .ant-menu-dark .ant-menu-item-selected::after {border-right: 0;}
 .ant-menu-dark .ant-menu-item-selected > a, .ant-menu-dark .ant-menu-item-selected > span > a, .ant-menu-dark .ant-menu-item-selected > a:hover, .ant-menu-dark .ant-menu-item-selected > span > a:hover {color: #fff;}
-.ant-menu-dark .ant-menu-item-selected .anticon {color: #fff;}
-.ant-menu-dark .ant-menu-item-selected .anticon + span {color: #fff;}
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon, .ant-menu-dark .ant-menu-item-selected .anticon {color: #fff;}
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon + span, .ant-menu-dark .ant-menu-item-selected .anticon + span {color: #fff;}
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {background-color: @primary-color;}
 .ant-menu-dark .ant-menu-item-disabled, .ant-menu-dark .ant-menu-submenu-disabled, .ant-menu-dark .ant-menu-item-disabled > a, .ant-menu-dark .ant-menu-submenu-disabled > a, .ant-menu-dark .ant-menu-item-disabled > span > a, .ant-menu-dark .ant-menu-submenu-disabled > span > a {color: rgba(255, 255, 255, 0.35) !important;}
 .ant-menu-dark .ant-menu-item-disabled > .ant-menu-submenu-title, .ant-menu-dark .ant-menu-submenu-disabled > .ant-menu-submenu-title {color: rgba(255, 255, 255, 0.35) !important;}
@@ -963,6 +965,7 @@ tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::afte
 .ant-message-warning .anticon {color: #faad14;}
 .ant-message-info .anticon, .ant-message-loading .anticon {color: @primary-color;}
 .ant-modal {color: rgba(0, 0, 0, 0.85);}
+.ant-modal-mask {background-color: rgba(0, 0, 0, 0.45);}
 .ant-modal-title {color: rgba(0, 0, 0, 0.85);}
 .ant-modal-content {background-color: #fff;background-clip: padding-box;border: 0;border-radius: 2px;box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);}
 .ant-modal-close {color: rgba(0, 0, 0, 0.45);background: transparent;border: 0;}
