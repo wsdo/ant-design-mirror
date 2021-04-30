@@ -1,0 +1,1 @@
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[9213],{77441:function(e){e.exports={content:["article"],meta:{category:"Design Patterns (Research)",type:"Template Document",order:1,title:"Form Page",skip:!0,filename:"docs/spec/research-form.en-US.md"},toc:["ul"]}}}]);

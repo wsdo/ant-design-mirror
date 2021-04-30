@@ -1,0 +1,1 @@
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[8170],{65361:function(e){e.exports={content:["article"],meta:{category:"Design Patterns (Research)",type:"Template Document",order:2,title:"Workbench",skip:!0,filename:"docs/spec/research-workbench.en-US.md"},toc:["ul"]}}}]);

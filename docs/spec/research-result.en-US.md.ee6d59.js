@@ -1,0 +1,1 @@
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[9431],{40508:function(e){e.exports={content:["article"],meta:{category:"Design Patterns (Research)",type:"Template Document",order:4,title:"Result Page",skip:!0,filename:"docs/spec/research-result.en-US.md"},toc:["ul"]}}}]);
