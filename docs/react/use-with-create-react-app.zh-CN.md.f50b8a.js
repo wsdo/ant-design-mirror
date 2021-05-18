@@ -1,4 +1,4 @@
-(self.webpackChunkantd=self.webpackChunkantd||[]).push([[3883],{32285:function(u){u.exports={content:["article",{},["h2","\u5B89\u88C5\u548C\u521D\u59CB\u5316"],["p","\u5728\u5F00\u59CB\u4E4B\u524D\uFF0C\u4F60\u53EF\u80FD\u9700\u8981\u5B89\u88C5 ",["a",{title:null,href:"https://github.com/yarnpkg/yarn/"},"yarn"],"\u3002"],["pre",{lang:"bash",highlighted:`$ yarn create react-app antd-demo
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[3883],{32285:function(n){n.exports={content:["article",{},["h2","\u5B89\u88C5\u548C\u521D\u59CB\u5316"],["p","\u5728\u5F00\u59CB\u4E4B\u524D\uFF0C\u4F60\u53EF\u80FD\u9700\u8981\u5B89\u88C5 ",["a",{title:null,href:"https://github.com/yarnpkg/yarn/"},"yarn"],"\u3002"],["pre",{lang:"bash",highlighted:`$ yarn create react-app antd-demo
 
 <span class="token comment" spellcheck="true"># or</span>
 

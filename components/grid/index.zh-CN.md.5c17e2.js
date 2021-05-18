@@ -1,4 +1,4 @@
-(self.webpackChunkantd=self.webpackChunkantd||[]).push([[7046],{75996:function(u){u.exports={content:["section",["p","24 \u6805\u683C\u7CFB\u7EDF\u3002"],["h2","\u8BBE\u8BA1\u7406\u5FF5"],["div",{class:"grid-demo"},["div",{class:"ant-row demo-row"},["div",{class:"ant-col-24 demo-col demo-col-1"},`
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[7046],{75996:function(t){t.exports={content:["section",["p","24 \u6805\u683C\u7CFB\u7EDF\u3002"],["h2","\u8BBE\u8BA1\u7406\u5FF5"],["div",{class:"grid-demo"},["div",{class:"ant-row demo-row"},["div",{class:"ant-col-24 demo-col demo-col-1"},`
     100%
   `]],["div",{class:"ant-row demo-row"},["div",{class:"ant-col-6 demo-col demo-col-2"},`
     25%

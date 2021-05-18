@@ -1,4 +1,4 @@
-(self.webpackChunkantd=self.webpackChunkantd||[]).push([[1440],{27032:function(s){s.exports={content:["article",{},["h2","Install and Initialization"],["p","Before all start, you may need install ",["a",{title:null,href:"https://github.com/yarnpkg/yarn/"},"yarn"],"."],["pre",{lang:"bash",highlighted:`$ yarn create react-app antd-demo
+(self.webpackChunkantd=self.webpackChunkantd||[]).push([[1440],{27032:function(n){n.exports={content:["article",{},["h2","Install and Initialization"],["p","Before all start, you may need install ",["a",{title:null,href:"https://github.com/yarnpkg/yarn/"},"yarn"],"."],["pre",{lang:"bash",highlighted:`$ yarn create react-app antd-demo
 
 <span class="token comment" spellcheck="true"># or</span>
 
