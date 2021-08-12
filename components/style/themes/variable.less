@@ -10,6 +10,9 @@
 @html-selector: html;
 
 html {
+  // ====================================================
+  // ==                     Colors                     ==
+  // ====================================================
   @base-primary: @blue-6;
 
   // ========= Primary Color =========
@@ -67,9 +70,44 @@ html {
   --@{ant-prefix}-info-color: @base-primary;
   --@{ant-prefix}-info-color-deprecated-bg: ~`colorPalette('@{base-primary}', 1) `;
   --@{ant-prefix}-info-color-deprecated-border: ~`colorPalette('@{base-primary}', 3) `;
+
+  // ====================================================
+  // ==                     Tokens                     ==
+  // ====================================================
+  @base-font-size: 14px;
+  @base-font-size-lg: @base-font-size + 2px;
+  --@{ant-prefix}-font-size-base: @base-font-size;
+  --@{ant-prefix}-font-size-lg: @base-font-size-lg;
+
+  // >>> Input
+  @base-input-padding-vertical-base: max(
+    (round(((@height-base - @base-font-size * @line-height-base) / 2) * 10) / 10) -
+      @border-width-base,
+    3px
+  );
+  --@{ant-prefix}-input-padding-vertical-base: @base-input-padding-vertical-base;
+  --@{ant-prefix}-input-padding-vertical-sm: max(
+    (round(((@height-sm - @base-font-size * @line-height-base) / 2) * 10) / 10) - @border-width-base,
+    0
+  );
+  --@{ant-prefix}-input-padding-vertical-lg: (
+      ceil(((@height-lg - @base-font-size-lg * @line-height-base) / 2) * 10) / 10
+    ) - @border-width-base;
+
+  // >>> Select
+  --@{ant-prefix}-select-multiple-item-height: @input-height-base -
+    @base-input-padding-vertical-base * 2;
+  --@{ant-prefix}-select-multiple-item-spacing-half: ceil((@base-input-padding-vertical-base / 2));
+
+  // >>> Tabs
+  --@{ant-prefix}-tabs-card-horizontal-padding: (
+      (@tabs-card-height - floor(@base-font-size * @line-height-base)) / 2
+    ) - @border-width-base @padding-md;
 }
 
-// -------- Colors -----------
+// ================================================================
+// ==                           Colors                           ==
+// ================================================================
 // >>> Primary
 @primary-color: ~'var(--@{ant-prefix}-primary-color)';
 @primary-color-hover: ~'var(--@{ant-prefix}-primary-color-hover)';
@@ -122,6 +160,9 @@ html {
 @primary-6: ~'var(--@{ant-prefix}-primary-6)'; // color used to control the text color of active buttons, don't use, use @primary-color
 @primary-7: ~'var(--@{ant-prefix}-primary-7)'; // replace shade(@primary-color, 5%)
 
+// ================================================================
+// ==                           Tokens                           ==
+// ================================================================
 // Base Scaffolding Variables
 // ---
 
@@ -147,14 +188,14 @@ html {
 @text-selection-bg: @primary-color;
 @font-variant-base: tabular-nums;
 @font-feature-settings-base: 'tnum';
-@font-size-base: 14px;
-@font-size-lg: @font-size-base + 2px;
+@font-size-base: ~'var(--@{ant-prefix}-font-size-base)';
+@font-size-lg: ~'var(--@{ant-prefix}-font-size-lg)';
 @font-size-sm: 12px;
-@heading-1-size: ceil(@font-size-base * 2.71);
-@heading-2-size: ceil(@font-size-base * 2.14);
-@heading-3-size: ceil(@font-size-base * 1.71);
-@heading-4-size: ceil(@font-size-base * 1.42);
-@heading-5-size: ceil(@font-size-base * 1.14);
+@heading-1-size: ~'calc(--@{ant-prefix}-font-size-base * 2.71)';
+@heading-2-size: ~'calc(--@{ant-prefix}-font-size-base * 2.14)';
+@heading-3-size: ~'calc(--@{ant-prefix}-font-size-base * 1.71)';
+@heading-4-size: ~'calc(--@{ant-prefix}-font-size-base * 1.42)';
+@heading-5-size: ~'calc(--@{ant-prefix}-font-size-base * 1.14)';
 // https://github.com/ant-design/ant-design/issues/20210
 @line-height-base: 1.5715;
 @border-radius-base: 2px;
@@ -300,9 +341,9 @@ html {
 @btn-square-size: @btn-height-base;
 @btn-square-size-lg: @btn-height-lg;
 @btn-square-size-sm: @btn-height-sm;
-@btn-square-only-icon-size: @font-size-base + 2px;
+@btn-square-only-icon-size: ~'calc(@{font-size-base} + 2px)';
 @btn-square-only-icon-size-sm: @font-size-base;
-@btn-square-only-icon-size-lg: @btn-font-size-lg + 2px;
+@btn-square-only-icon-size-lg: ~'calc(@{btn-font-size-lg} + 2px)';
 
 @btn-group-border: @primary-5;
 
@@ -474,19 +515,9 @@ html {
 @input-padding-horizontal-base: @input-padding-horizontal;
 @input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
 @input-padding-horizontal-lg: @input-padding-horizontal;
-@input-padding-vertical-base: max(
-  (round(((@input-height-base - @font-size-base * @line-height-base) / 2) * 10) / 10) -
-    @border-width-base,
-  3px
-);
-@input-padding-vertical-sm: max(
-  (round(((@input-height-sm - @font-size-base * @line-height-base) / 2) * 10) / 10) -
-    @border-width-base,
-  0
-);
-@input-padding-vertical-lg: (
-    ceil(((@input-height-lg - @font-size-lg * @line-height-base) / 2) * 10) / 10
-  ) - @border-width-base;
+@input-padding-vertical-base: ~'var(--@{ant-prefix}-input-padding-vertical-base)';
+@input-padding-vertical-sm: ~'var(--@{ant-prefix}-input-padding-vertical-sm)';
+@input-padding-vertical-lg: ~'var(--@{ant-prefix}-input-padding-vertical-lg)';
 @input-placeholder-color: hsv(0, 0, 75%);
 @input-color: @text-color;
 @input-icon-color: @input-color;
@@ -526,9 +557,9 @@ html {
 @select-selection-item-bg: @background-color-base;
 @select-selection-item-border-color: @border-color-split;
 @select-single-item-height-lg: 40px;
-@select-multiple-item-height: @input-height-base - @input-padding-vertical-base * 2; // Normal 24px
+@select-multiple-item-height: ~'var(--@{ant-prefix}-select-multiple-item-height)'; // Normal 24px
 @select-multiple-item-height-lg: 32px;
-@select-multiple-item-spacing-half: ceil((@input-padding-vertical-base / 2));
+@select-multiple-item-spacing-half: ~'var(--@{ant-prefix}-select-multiple-item-spacing-half)';
 @select-multiple-disabled-background: @input-disabled-bg;
 @select-multiple-item-disabled-color: #bfbfbf;
 @select-multiple-item-disabled-border-color: @select-border-color;
@@ -816,9 +847,7 @@ html {
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
-@tabs-card-horizontal-padding: (
-    (@tabs-card-height - floor(@font-size-base * @line-height-base)) / 2
-  ) - @border-width-base @padding-md;
+@tabs-card-horizontal-padding: ~'var(--@{ant-prefix}-tabs-card-horizontal-padding)';
 @tabs-card-horizontal-padding-sm: 6px @padding-md;
 @tabs-card-horizontal-padding-lg: 7px @padding-md 6px;
 @tabs-title-font-size: @font-size-base;
@@ -1008,7 +1037,7 @@ html {
 @alert-with-description-padding-vertical: @padding-md - 1px;
 @alert-with-description-padding: @alert-with-description-padding-vertical 15px
   @alert-with-description-no-icon-padding-vertical @alert-with-description-icon-size;
-@alert-icon-top: 8px + @font-size-base * (@line-height-base / 2) - (@font-size-base / 2);
+@alert-icon-top: ~'calc(8px + @{font-size-base} * (@{line-height-base} / 2) - (@{font-size-base} / 2))';
 @alert-with-description-icon-size: 24px;
 
 // List

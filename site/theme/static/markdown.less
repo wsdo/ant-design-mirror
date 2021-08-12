@@ -1,3 +1,5 @@
+@site-font-size-base: 14px;
+
 .markdown {
   color: @site-text-color;
   font-size: 14px;
@@ -138,7 +140,7 @@
   padding: 0;
   overflow: auto;
   color: @site-text-color;
-  font-size: max(@font-size-base - 1px, 12px);
+  font-size: max(@site-font-size-base - 1px, 12px);
   direction: ltr;
   text-align: left;
   background: #f5f5f5;
@@ -260,7 +262,7 @@
     margin: 2em 0;
     overflow-x: auto;
     overflow-y: hidden;
-    font-size: max(@font-size-base - 1px, 12px);
+    font-size: max(@site-font-size-base - 1px, 12px);
     font-family: @code-family;
     line-height: @line-height-base;
     border: 0;
@@ -306,15 +308,15 @@
       &:nth-child(3) {
         width: 22%;
         color: @magenta-7;
-        font-size: max(@font-size-base - 1px, 12px);
+        font-size: max(@site-font-size-base - 1px, 12px);
       }
       &:nth-child(4) {
         width: 15%;
-        font-size: max(@font-size-base - 1px, 12px);
+        font-size: max(@site-font-size-base - 1px, 12px);
       }
       &:nth-child(5) {
         width: 8%;
-        font-size: max(@font-size-base - 1px, 12px);
+        font-size: max(@site-font-size-base - 1px, 12px);
       }
       &:nth-last-child(3):first-child {
         width: 38%;

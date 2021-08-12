@@ -3,6 +3,8 @@ order: 5
 title:
   zh-CN: 全局样式
   en-US: Global Theme
+debug: true
+only: true
 ---
 
 ## zh-CN
@@ -57,6 +59,8 @@ import {
   Spin,
   Transfer,
 } from 'antd';
+
+import { defaultTheme, compactTheme } from '../../theme';
 
 const SplitSpace = props => <Space split={<Divider type="vertical" />} size={4} {...props} />;
 
@@ -144,7 +148,9 @@ const FormSizeDemo = () => {
     };
     setColor(mergedNextColor);
     ConfigProvider.config({
-      theme: mergedNextColor,
+      theme: {
+        colors: mergedNextColor,
+      },
     });
   }
 
@@ -152,6 +158,33 @@ const FormSizeDemo = () => {
     <Row gutter={16} wrap={false}>
       <Col flex="none">
         <Space direction="vertical" align="center">
+          {/* Theme */}
+          <Space>
+            {/* Default */}
+            <Button
+              onClick={() => {
+                console.log('Change:', defaultTheme);
+                ConfigProvider.config({
+                  theme: defaultTheme,
+                });
+              }}
+            >
+              Default
+            </Button>
+
+            {/* Compact */}
+            <Button
+              onClick={() => {
+                console.log('Change:', compactTheme);
+                ConfigProvider.config({
+                  theme: compactTheme,
+                });
+              }}
+            >
+              Compact
+            </Button>
+          </Space>
+
           {/* Primary Color */}
           <SketchPicker
             presetColors={['#1890ff', '#25b864', '#ff6f00']}

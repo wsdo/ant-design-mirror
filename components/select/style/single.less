@@ -1,6 +1,6 @@
 @import './index';
 
-@selection-item-padding: ceil(@font-size-base * 1.25);
+@selection-item-padding: ~'calc(@font-size-base * 1.25)';
 
 .@{select-prefix-cls}-single {
   // ========================= Selector =========================
@@ -57,7 +57,7 @@
 
   // With arrow should provides `padding-right` to show the arrow
   &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-search {
-    right: @input-padding-horizontal-base + @font-size-base;
+    right: ~'calc(@{input-padding-horizontal-base} + @{font-size-base})';
   }
 
   &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-item,
@@ -157,12 +157,12 @@
 
       // With arrow should provides `padding-right` to show the arrow
       &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-search {
-        right: @input-padding-horizontal-sm + @font-size-base * 1.5;
+        right: ~'calc(@{input-padding-horizontal-sm} + @{font-size-base} * 1.5)';
       }
 
       &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-item,
       &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-placeholder {
-        padding-right: @font-size-base * 1.5;
+        padding-right: ~'calc(@{font-size-base} * 1.5)';
       }
     }
   }

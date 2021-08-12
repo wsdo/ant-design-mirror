@@ -3,12 +3,39 @@
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { TinyColor } from '@ctrl/tinycolor';
 import { generate } from '@ant-design/colors';
-import { Theme } from './context';
+import kebabCase from 'lodash/kebabCase';
+import {
+  defaultTheme,
+  Theme,
+  TokenType,
+  TokenTypes,
+  ValueType,
+  excludeParseTokens,
+} from '../theme';
+
+// Confirm List:
+/**
+ * Confirm List:
+ *
+ * - Button
+ * - Input
+ * - Select
+ * - DatePicker
+ * - Switcher
+ * - Upload - Item
+ * - Alert
+ * - Table
+ */
 
 const dynamicStyleMark = `-ant-${Date.now()}-${Math.random()}`;
 
 export function registerTheme(globalPrefixCls: string, theme: Theme) {
   const variables: Record<string, string> = {};
+
+  // ========================================================================
+  // ==                               Colors                               ==
+  // ========================================================================
+  const { colors = {}, token = {} } = theme;
 
   const formatColor = (
     color: TinyColor,
@@ -33,10 +60,10 @@ export function registerTheme(globalPrefixCls: string, theme: Theme) {
   };
 
   // ================ Primary Color ================
-  if (theme.primaryColor) {
-    fillColor(theme.primaryColor, 'primary');
+  if (colors.primaryColor) {
+    fillColor(colors.primaryColor, 'primary');
 
-    const primaryColor = new TinyColor(theme.primaryColor);
+    const primaryColor = new TinyColor(colors.primaryColor);
     const primaryColors = generate(primaryColor.toRgbString());
 
     // Legacy - We should use semantic naming standard
@@ -62,25 +89,92 @@ export function registerTheme(globalPrefixCls: string, theme: Theme) {
   }
 
   // ================ Success Color ================
-  if (theme.successColor) {
-    fillColor(theme.successColor, 'success');
+  if (colors.successColor) {
+    fillColor(colors.successColor, 'success');
   }
 
   // ================ Warning Color ================
-  if (theme.warningColor) {
-    fillColor(theme.warningColor, 'warning');
+  if (colors.warningColor) {
+    fillColor(colors.warningColor, 'warning');
   }
 
   // ================= Error Color =================
-  if (theme.errorColor) {
-    fillColor(theme.errorColor, 'error');
+  if (colors.errorColor) {
+    fillColor(colors.errorColor, 'error');
   }
 
   // ================= Info Color ==================
-  if (theme.infoColor) {
-    fillColor(theme.infoColor, 'info');
+  if (colors.infoColor) {
+    fillColor(colors.infoColor, 'info');
   }
 
+  // ========================================================================
+  // ==                               Tokens                               ==
+  // ========================================================================
+  if (token) {
+    const mergedToken: Record<string, ValueType> = {
+      ...defaultTheme.token,
+      ...token,
+    };
+
+    TokenTypes.forEach((key: TokenType) => {
+      Object.defineProperty(variables, key, {
+        get() {
+          const value = mergedToken[key];
+          let returnValue: string | number;
+
+          if (typeof value === 'function') {
+            returnValue = value(variables);
+          } else {
+            returnValue = value;
+          }
+
+          console.log('>>>', key, excludeParseTokens);
+
+          if (excludeParseTokens.has(key)) {
+            return returnValue;
+          }
+
+          return typeof returnValue === 'number' ? `${returnValue}px` : returnValue;
+        },
+      });
+    });
+
+    // const rawToken: Record<string, RawValueType> = {};
+    // Object.keys(mergedToken).forEach(key => {
+    //   const value = mergedToken[key];
+
+    //   if (typeof value === 'function') {
+    //     rawToken[key] = value();
+    //   }
+    // });
+
+    // // =========== Extend Tokens Generate ============
+    // mergedToken.fontSizeLG = (mergedToken.fontSizeBase as any) + 2;
+
+    // // Merge again in case user provided this
+    // mergedToken = {
+    //   ...mergedToken,
+    //   ...token,
+    // };
+
+    // // =============== Fill Variables ================
+    // Object.keys(mergedToken).forEach((key: TokenType) => {
+    //   const variableKey = kebabCase(key);
+    //   const value = mergedToken[key];
+    //   const valueType = typeof value;
+
+    //   if (valueType === 'number') {
+    //     variables[variableKey] = `${value}px`;
+    //   } else {
+    //     variables[variableKey] = value as string;
+    //   }
+    // });
+  }
+
+  // ========================================================================
+  // ==                              Generate                              ==
+  // ========================================================================
   // Convert to css variables
   const cssList = Object.keys(variables).map(
     key => `--${globalPrefixCls}-${key}: ${variables[key]};`,

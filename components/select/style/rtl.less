@@ -1,6 +1,7 @@
 @import '../../style/themes/index';
 @import '../../style/mixins/index';
 @import '../../input/style/mixin';
+@import (reference) './single';
 
 @select-prefix-cls: ~'@{ant-prefix}-select';
 
@@ -111,8 +112,6 @@
 }
 
 // single
-@selection-item-padding: ceil(@font-size-base * 1.25);
-
 .@{select-prefix-cls}-single {
   // ========================= Selector =========================
   .@{select-prefix-cls}-selector {
