@@ -132,7 +132,7 @@
     .@{ant-prefix}-picker {
       .@{form-prefix-cls}-rtl & {
         padding-right: @input-padding-horizontal-base;
-        padding-left: @input-padding-horizontal-base + @font-size-base * 1.3;
+        padding-left: ~'calc(@{input-padding-horizontal-base} + @{font-size-base} * 1.3)';
       }
 
       &-large {

@@ -122,7 +122,7 @@
   &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-search {
     .@{select-prefix-cls}-rtl& {
       right: @input-padding-horizontal-base;
-      left: @input-padding-horizontal-base + @font-size-base;
+      left: ~'calc(@{input-padding-horizontal-base} + @{font-size-base})';
     }
   }
 
@@ -152,7 +152,7 @@
       &.@{select-prefix-cls}-show-arrow .@{select-prefix-cls}-selection-placeholder {
         .@{select-prefix-cls}-rtl& {
           padding-right: 0;
-          padding-left: @font-size-base * 1.5;
+          padding-left: ~'calc(@{font-size-base} * 1.5)';
         }
       }
     }
