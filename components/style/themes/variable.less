@@ -79,6 +79,8 @@ html {
   --@{ant-prefix}-font-size-base: @base-font-size;
   --@{ant-prefix}-font-size-lg: @base-font-size-lg;
 
+  --@{ant-prefix}-font-line-height: round(@base-font-size * @line-height-base);
+
   // >>> Input
   @base-input-padding-vertical-base: max(
     (round(((@height-base - @base-font-size * @line-height-base) / 2) * 10) / 10) -
@@ -98,6 +100,7 @@ html {
   --@{ant-prefix}-select-multiple-item-height: @input-height-base -
     @base-input-padding-vertical-base * 2;
   --@{ant-prefix}-select-multiple-item-spacing-half: ceil((@base-input-padding-vertical-base / 2));
+  --@{ant-prefix}-select-multiple-padding: ~'max(calc(@{input-padding-vertical-base} - @{border-width-base} - @{select-multiple-item-spacing-half}), 0)';
 
   // >>> Tabs
   --@{ant-prefix}-tabs-card-horizontal-padding: (
@@ -165,6 +168,9 @@ html {
 // ================================================================
 // Base Scaffolding Variables
 // ---
+
+// Calculation value. To align with variable.less
+@font-line-height: ~'var(--@{ant-prefix}-font-line-height)';
 
 // Background color for `<body>`
 @body-background: #fff;
@@ -563,6 +569,8 @@ html {
 @select-multiple-disabled-background: @input-disabled-bg;
 @select-multiple-item-disabled-color: #bfbfbf;
 @select-multiple-item-disabled-border-color: @select-border-color;
+// Calculation value. Do not replace this!!!!
+@select-multiple-padding: ~'var(--@{ant-prefix}-select-multiple-padding)';
 
 // Cascader
 // ---

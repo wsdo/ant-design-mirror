@@ -12,7 +12,6 @@
 
 @form-prefix-cls: ~'@{ant-prefix}-form';
 @form-item-prefix-cls: ~'@{form-prefix-cls}-item';
-@form-font-height: ceil(@font-size-base * @line-height-base);
 
 .@{form-prefix-cls} {
   .reset-component();
@@ -191,7 +190,7 @@
     font-size: @font-size-base;
     line-height: @line-height-base;
     transition: color 0.3s @ease-out; // sync input color transition
-    .explainAndExtraDistance((@form-item-margin-bottom - @form-font-height) / 2);
+    .explainAndExtraDistance((@form-item-margin-bottom - @font-line-height) / 2);
   }
 
   &-explain-connected {

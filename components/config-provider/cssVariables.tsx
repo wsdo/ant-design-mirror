@@ -11,6 +11,7 @@ import {
   TokenTypes,
   ValueType,
   excludeParseTokens,
+  CalculateValueType,
 } from '../theme';
 
 // Confirm List:
@@ -28,6 +29,10 @@ import {
  */
 
 const dynamicStyleMark = `-ant-${Date.now()}-${Math.random()}`;
+
+const calculationToken: Record<string, CalculateValueType> = {
+  fontLineHeight: token => Math.round(token.fontSizeBase * token.lineHeightBase),
+};
 
 export function registerTheme(globalPrefixCls: string, theme: Theme) {
   const variables: Record<string, string> = {};
@@ -115,8 +120,10 @@ export function registerTheme(globalPrefixCls: string, theme: Theme) {
     const mergedToken: Record<string, ValueType> = {
       ...defaultTheme.token,
       ...token,
+      ...calculationToken,
     };
 
+    // Use `get` to auto fill all the value
     TokenTypes.forEach((key: TokenType) => {
       Object.defineProperty(variables, key, {
         get() {
@@ -124,7 +131,7 @@ export function registerTheme(globalPrefixCls: string, theme: Theme) {
           let returnValue: string | number;
 
           if (typeof value === 'function') {
-            returnValue = value(variables);
+            returnValue = value(variables as any);
           } else {
             returnValue = value;
           }
@@ -177,7 +184,7 @@ export function registerTheme(globalPrefixCls: string, theme: Theme) {
   // ========================================================================
   // Convert to css variables
   const cssList = Object.keys(variables).map(
-    key => `--${globalPrefixCls}-${key}: ${variables[key]};`,
+    key => `--${globalPrefixCls}-${kebabCase(key)}: ${variables[key]};`,
   );
 
   updateCSS(

@@ -39,6 +39,9 @@
 // Base Scaffolding Variables
 // ---
 
+// Calculation value. To align with variable.less
+@font-line-height: round(@font-size-base * @line-height-base);
+
 // Background color for `<body>`
 @body-background: #fff;
 // Base background color for most components
@@ -447,6 +450,11 @@
 @select-multiple-disabled-background: @input-disabled-bg;
 @select-multiple-item-disabled-color: #bfbfbf;
 @select-multiple-item-disabled-border-color: @select-border-color;
+// Calculation value. Do not replace this!!!!
+@select-multiple-padding: max(
+  @input-padding-vertical-base - @border-width-base - @select-multiple-item-spacing-half,
+  0
+);
 
 // Cascader
 // ---

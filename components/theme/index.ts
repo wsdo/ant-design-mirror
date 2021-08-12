@@ -2,8 +2,9 @@ import defaultTheme from './default';
 import compactTheme from './compact';
 import { tuple } from '../_util/type';
 
-export type RawValueType = string | number;
-export type ValueType = RawValueType | ((token: Record<TokenType, ValueType>) => RawValueType);
+export type RawValueType = number;
+export type CalculateValueType = (token: Record<TokenType, RawValueType>) => RawValueType;
+export type ValueType = RawValueType | CalculateValueType;
 
 export type ColorType =
   | 'primaryColor'
