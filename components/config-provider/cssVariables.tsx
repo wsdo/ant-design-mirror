@@ -13,6 +13,7 @@ import {
   excludeParseTokens,
   CalculateValueType,
 } from '../theme';
+import { round } from 'lodash';
 
 // Confirm List:
 /**
@@ -32,6 +33,8 @@ const dynamicStyleMark = `-ant-${Date.now()}-${Math.random()}`;
 
 const calculationToken: Record<string, CalculateValueType> = {
   fontLineHeight: token => Math.round(token.fontSizeBase * token.lineHeightBase),
+  verticalLinePadding: token =>
+    Math.round(((token.heightBase - token.fontLineHeight) / 2) * 10) / 10,
 };
 
 export function registerTheme(globalPrefixCls: string, theme: Theme) {

@@ -13,34 +13,34 @@ html {
   // ====================================================
   // ==                     Colors                     ==
   // ====================================================
-  @base-primary: @blue-6;
+  @tmp-primary: @blue-6;
 
   // ========= Primary Color =========
-  --@{ant-prefix}-primary-color: @base-primary;
-  --@{ant-prefix}-primary-color-hover: color(~`colorPalette('@{base-primary}', 5) `);
-  --@{ant-prefix}-primary-color-active: color(~`colorPalette('@{base-primary}', 7) `);
-  --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
+  --@{ant-prefix}-primary-color: @tmp-primary;
+  --@{ant-prefix}-primary-color-hover: color(~`colorPalette('@{tmp-primary}', 5) `);
+  --@{ant-prefix}-primary-color-active: color(~`colorPalette('@{tmp-primary}', 7) `);
+  --@{ant-prefix}-primary-color-outline: fade(@tmp-primary, @outline-fade);
 
   // Legacy
-  @legacy-primary-1: color(~`colorPalette('@{base-primary}', 1) `);
+  @tmp-legacy-primary-1: color(~`colorPalette('@{tmp-primary}', 1) `);
 
-  --@{ant-prefix}-primary-1: @legacy-primary-1;
-  --@{ant-prefix}-primary-2: color(~`colorPalette('@{base-primary}', 2) `);
-  --@{ant-prefix}-primary-3: color(~`colorPalette('@{base-primary}', 3) `);
-  --@{ant-prefix}-primary-4: color(~`colorPalette('@{base-primary}', 4) `);
-  --@{ant-prefix}-primary-5: color(~`colorPalette('@{base-primary}', 5) `);
-  --@{ant-prefix}-primary-6: @base-primary;
-  --@{ant-prefix}-primary-7: color(~`colorPalette('@{base-primary}', 7) `);
+  --@{ant-prefix}-primary-1: @tmp-legacy-primary-1;
+  --@{ant-prefix}-primary-2: color(~`colorPalette('@{tmp-primary}', 2) `);
+  --@{ant-prefix}-primary-3: color(~`colorPalette('@{tmp-primary}', 3) `);
+  --@{ant-prefix}-primary-4: color(~`colorPalette('@{tmp-primary}', 4) `);
+  --@{ant-prefix}-primary-5: color(~`colorPalette('@{tmp-primary}', 5) `);
+  --@{ant-prefix}-primary-6: @tmp-primary;
+  --@{ant-prefix}-primary-7: color(~`colorPalette('@{tmp-primary}', 7) `);
 
   // Deprecated
   --@{ant-prefix}-primary-color-deprecated-pure: ~'';
-  --@{ant-prefix}-primary-color-deprecated-l-35: lighten(@base-primary, 35%);
-  --@{ant-prefix}-primary-color-deprecated-l-20: lighten(@base-primary, 20%);
-  --@{ant-prefix}-primary-color-deprecated-t-20: tint(@base-primary, 20%);
-  --@{ant-prefix}-primary-color-deprecated-t-50: tint(@base-primary, 50%);
-  --@{ant-prefix}-primary-color-deprecated-f-12: fade(@base-primary, 12%);
-  --@{ant-prefix}-primary-color-active-deprecated-f-30: fade(@legacy-primary-1, 30%);
-  --@{ant-prefix}-primary-color-active-deprecated-d-02: darken(@legacy-primary-1, 2%);
+  --@{ant-prefix}-primary-color-deprecated-l-35: lighten(@tmp-primary, 35%);
+  --@{ant-prefix}-primary-color-deprecated-l-20: lighten(@tmp-primary, 20%);
+  --@{ant-prefix}-primary-color-deprecated-t-20: tint(@tmp-primary, 20%);
+  --@{ant-prefix}-primary-color-deprecated-t-50: tint(@tmp-primary, 50%);
+  --@{ant-prefix}-primary-color-deprecated-f-12: fade(@tmp-primary, 12%);
+  --@{ant-prefix}-primary-color-active-deprecated-f-30: fade(@tmp-legacy-primary-1, 30%);
+  --@{ant-prefix}-primary-color-active-deprecated-d-02: darken(@tmp-legacy-primary-1, 2%);
 
   // ========= Success Color =========
   --@{ant-prefix}-success-color: @green-6;
@@ -67,44 +67,59 @@ html {
   --@{ant-prefix}-warning-color-deprecated-border: ~`colorPalette('@{gold-6}', 3) `;
 
   // ========== Info Color ===========
-  --@{ant-prefix}-info-color: @base-primary;
-  --@{ant-prefix}-info-color-deprecated-bg: ~`colorPalette('@{base-primary}', 1) `;
-  --@{ant-prefix}-info-color-deprecated-border: ~`colorPalette('@{base-primary}', 3) `;
+  --@{ant-prefix}-info-color: @tmp-primary;
+  --@{ant-prefix}-info-color-deprecated-bg: ~`colorPalette('@{tmp-primary}', 1) `;
+  --@{ant-prefix}-info-color-deprecated-border: ~`colorPalette('@{tmp-primary}', 3) `;
 
   // ====================================================
   // ==                     Tokens                     ==
   // ====================================================
-  @base-font-size: 14px;
-  @base-font-size-lg: @base-font-size + 2px;
-  --@{ant-prefix}-font-size-base: @base-font-size;
-  --@{ant-prefix}-font-size-lg: @base-font-size-lg;
+  // >>> Font
+  @tmp-font-size: 14px;
+  @tmp-font-size-lg: @tmp-font-size + 2px;
+  --@{ant-prefix}-font-size-base: @tmp-font-size;
+  --@{ant-prefix}-font-size-lg: @tmp-font-size-lg;
 
-  --@{ant-prefix}-font-line-height: round(@base-font-size * @line-height-base);
+  // --- base
+  @tmp-font-line-height: round(@tmp-font-size * @line-height-base);
+  --@{ant-prefix}-font-line-height: @tmp-font-line-height;
 
+  // --- lg
+  @tmp-font-line-height-lg: round(@tmp-font-size-lg * @line-height-base);
+  --@{ant-prefix}-font-line-height-lg: @tmp-font-line-height-lg;
+
+  // >>> Height
+  @tmp-height-base: 32px;
+  @tmp-height-lg: 40px;
+  @tmp-height-sm: 24px;
+  --@{ant-prefix}-height-base: @tmp-height-base;
+  --@{ant-prefix}-height-lg: @tmp-height-lg;
+  --@{ant-prefix}-height-sm: @tmp-height-sm;
+
+  // >>> Padding
+  @tmp-vertical-line-padding: round(((@tmp-height-base - @tmp-font-line-height) / 2) * 10) / 10;
+  @tmp-vertical-line-padding-sm: round(((@tmp-height-sm - @tmp-font-line-height) / 2) * 10) / 10;
+  @tmp-vertical-line-padding-lg: ceil(((@tmp-height-lg - @tmp-font-line-height-lg) / 2) * 10) / 10;
+
+  // ========== Components ===========
   // >>> Input
-  @base-input-padding-vertical-base: max(
-    (round(((@height-base - @base-font-size * @line-height-base) / 2) * 10) / 10) -
-      @border-width-base,
-    3px
-  );
-  --@{ant-prefix}-input-padding-vertical-base: @base-input-padding-vertical-base;
+  @tmp-input-padding-vertical-base: max(@tmp-vertical-line-padding - @border-width-base, 3px);
+  --@{ant-prefix}-input-padding-vertical-base: @tmp-input-padding-vertical-base;
   --@{ant-prefix}-input-padding-vertical-sm: max(
-    (round(((@height-sm - @base-font-size * @line-height-base) / 2) * 10) / 10) - @border-width-base,
+    @tmp-vertical-line-padding-sm - @border-width-base,
     0
   );
-  --@{ant-prefix}-input-padding-vertical-lg: (
-      ceil(((@height-lg - @base-font-size-lg * @line-height-base) / 2) * 10) / 10
-    ) - @border-width-base;
+  --@{ant-prefix}-input-padding-vertical-lg: @tmp-vertical-line-padding-lg - @border-width-base;
 
   // >>> Select
-  --@{ant-prefix}-select-multiple-item-height: @input-height-base -
-    @base-input-padding-vertical-base * 2;
-  --@{ant-prefix}-select-multiple-item-spacing-half: ceil((@base-input-padding-vertical-base / 2));
-  --@{ant-prefix}-select-multiple-padding: ~'max(calc(@{input-padding-vertical-base} - @{border-width-base} - @{select-multiple-item-spacing-half}), 0)';
+  --@{ant-prefix}-select-multiple-item-height: @input-height-base - @tmp-input-padding-vertical-base *
+    2;
+  --@{ant-prefix}-select-multiple-item-spacing-half: ceil((@tmp-input-padding-vertical-base / 2));
+  --@{ant-prefix}-select-multiple-padding: ~'max(calc(@{tmp-input-padding-vertical-base} - @{border-width-base} - @{select-multiple-item-spacing-half}), 0)';
 
   // >>> Tabs
   --@{ant-prefix}-tabs-card-horizontal-padding: (
-      (@tabs-card-height - floor(@base-font-size * @line-height-base)) / 2
+      (@tabs-card-height - floor(@tmp-font-size * @line-height-base)) / 2
     ) - @border-width-base @padding-md;
 }
 
@@ -226,9 +241,9 @@ html {
 @margin-xss: 4px; // more small
 
 // height rules
-@height-base: 32px;
-@height-lg: 40px;
-@height-sm: 24px;
+@height-base: ~'var(--@{ant-prefix}-height-base)';
+@height-lg: ~'var(--@{ant-prefix}-height-lg)';
+@height-sm: ~'var(--@{ant-prefix}-height-sm)';
 
 // The background colors for active and hover states for things like
 // list items or table cells.

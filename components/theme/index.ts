@@ -3,7 +3,9 @@ import compactTheme from './compact';
 import { tuple } from '../_util/type';
 
 export type RawValueType = number;
-export type CalculateValueType = (token: Record<TokenType, RawValueType>) => RawValueType;
+export type CalculateValueType = (
+  token: Record<TokenType | CalculateTokenType, RawValueType>,
+) => RawValueType;
 export type ValueType = RawValueType | CalculateValueType;
 
 export type ColorType =
@@ -50,6 +52,8 @@ export const TokenTypes = tuple(
 );
 
 export type TokenType = typeof TokenTypes[number];
+
+type CalculateTokenType = 'fontLineHeight' | 'verticalLinePadding';
 
 // Why Control is base?
 // @control-padding-horizontal: @padding-sm;

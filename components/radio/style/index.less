@@ -169,7 +169,7 @@ span.@{radio-prefix-cls} + * {
   padding: 0 @padding-md - 1px;
   color: @radio-button-color;
   font-size: @font-size-base;
-  line-height: @btn-height-base - 2px;
+  line-height: ~'calc(@{btn-height-base} - 2px)';
   background: @radio-button-bg;
   border: @border-width-base @border-style-base @border-color-base;
   // strange align fix for chrome but works
