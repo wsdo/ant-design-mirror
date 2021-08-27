@@ -25,9 +25,13 @@
     <link id="darkThemeLink" rel="stylesheet" href="/dark.css" />
     <script>
       /* 设置 meta theme-color 的值，默认会设置一个 #1890ff   */
-      function setColor(isDarken) {
+      function setColor(isDarken, color) {
         try {
           const theme = document.getElementsByTagName('meta')['theme-color'];
+          if (color) {
+            theme.setAttribute('content', color);
+            return;
+          }
           theme.setAttribute('content', isDarken ? 'rgba(0,0,0,0.65)' : '#1890ff');
         } catch (error) {}
       }

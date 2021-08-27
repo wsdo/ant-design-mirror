@@ -3,6 +3,7 @@ import { message } from 'antd';
 import RcFooter from 'rc-footer';
 import { Link } from 'bisheng/router';
 import { presetPalettes } from '@ant-design/colors';
+import { setThemeColorMeta } from '@umijs/set-meta-theme-color';
 import { FormattedMessage, injectIntl, WrappedComponentProps } from 'react-intl';
 import {
   AntDesignOutlined,
@@ -331,6 +332,8 @@ class Footer extends React.Component<WrappedComponentProps & { location: any }> 
           '@primary-color': color,
         })
         .then(() => {
+          // 切换 meta 信息的 theme-color 标签
+          setThemeColorMeta?.(false, color);
           message.success({
             content: messages['app.footer.primary-color-changed'],
             key: 'change-primary-color',
