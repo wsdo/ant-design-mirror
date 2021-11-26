@@ -16165,6 +16165,7 @@ textarea.ant-mentions {
 .ant-modal-centered .ant-modal {
   top: 0;
   display: inline-block;
+  padding-bottom: 0;
   text-align: left;
   vertical-align: middle;
 }
