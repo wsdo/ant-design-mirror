@@ -1,0 +1,14 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["components/avatar/demo"],{
+
+/***/ "./node_modules/bisheng/tmp/components-avatar-demo.index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/bisheng/tmp/components-avatar-demo.index.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = {\n    'badge': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/badge.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/badge.md\"),\n    'basic': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/basic.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/basic.md\"),\n    'dynamic': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/dynamic.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/dynamic.md\"),\n    'fallback': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/fallback.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/fallback.md\"),\n    'group': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/group.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/group.md\"),\n    'responsive': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/responsive.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/responsive.md\"),\n    'toggle-debug': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/toggle-debug.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/toggle-debug.md\"),\n    'type': __webpack_require__(/*! ./node_modules/bisheng/lib/loaders/source-loader!./components/avatar/demo/type.md */ \"/home/runner/work/ant-design/ant-design/node_modules/bisheng/lib/loaders/source-loader!/home/runner/work/ant-design/ant-design/components/avatar/demo/type.md\"),\n}\n\n//# sourceURL=webpack:///./node_modules/bisheng/tmp/components-avatar-demo.index.js?");
+
+/***/ })
+
+}]);
