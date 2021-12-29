@@ -5800,9 +5800,6 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   border-style: dashed;
   border-width: 1px 0 0;
 }
-.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed {
-  border-top: 0;
-}
 .ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::before,
 .ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::after {
   border-style: dashed none none;
