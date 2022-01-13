@@ -12623,9 +12623,9 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   display: inline-block;
 }
 .ant-image-img {
-  display: block;
   width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 .ant-image-img-placeholder {
   background-color: #f5f5f5;
@@ -18599,8 +18599,6 @@ span.ant-radio + * {
 .ant-select-multiple .ant-select-selection-search {
   position: relative;
   max-width: 100%;
-  margin-top: 2px;
-  margin-bottom: 2px;
   -webkit-margin-start: 4px;
           margin-inline-start: 4px;
 }
@@ -25387,9 +25385,6 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
-}
-svg:not(:root) {
-  overflow: hidden;
 }
 a,
 area,
