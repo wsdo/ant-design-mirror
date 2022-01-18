@@ -20697,6 +20697,9 @@ span.ant-radio + * {
 .ant-steps-navigation.ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail {
   visibility: hidden;
 }
+.ant-steps-navigation.ant-steps-horizontal > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail {
+  visibility: hidden;
+}
 .ant-steps-rtl {
   direction: rtl;
 }
@@ -25835,6 +25838,10 @@ mark {
 }
 .anticon .anticon-icon {
   display: block;
+}
+.anticon > .anticon {
+  line-height: 0;
+  vertical-align: 0;
 }
 .anticon[tabindex] {
   cursor: pointer;
