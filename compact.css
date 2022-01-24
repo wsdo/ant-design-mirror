@@ -887,7 +887,7 @@
   top: 100%;
   width: 8px;
   height: 8px;
-  color: currentColor;
+  color: currentcolor;
   border: 4px solid;
   transform: scaleY(0.75);
   transform-origin: top;
@@ -960,7 +960,7 @@
 }
 .ant-ribbon.ant-ribbon-placement-end .ant-ribbon-corner {
   right: 0;
-  border-color: currentColor transparent transparent currentColor;
+  border-color: currentcolor transparent transparent currentcolor;
 }
 .ant-ribbon.ant-ribbon-placement-start {
   left: -8px;
@@ -968,7 +968,7 @@
 }
 .ant-ribbon.ant-ribbon-placement-start .ant-ribbon-corner {
   left: 0;
-  border-color: currentColor currentColor transparent transparent;
+  border-color: currentcolor currentcolor transparent transparent;
 }
 .ant-badge-rtl {
   direction: rtl;
@@ -1004,10 +1004,10 @@
 .ant-ribbon-rtl.ant-ribbon-placement-end .ant-ribbon-corner {
   right: unset;
   left: 0;
-  border-color: currentColor currentColor transparent transparent;
+  border-color: currentcolor currentcolor transparent transparent;
 }
 .ant-ribbon-rtl.ant-ribbon-placement-end .ant-ribbon-corner::after {
-  border-color: currentColor currentColor transparent transparent;
+  border-color: currentcolor currentcolor transparent transparent;
 }
 .ant-ribbon-rtl.ant-ribbon-placement-start {
   right: -8px;
@@ -1018,10 +1018,10 @@
 .ant-ribbon-rtl.ant-ribbon-placement-start .ant-ribbon-corner {
   right: 0;
   left: unset;
-  border-color: currentColor transparent transparent currentColor;
+  border-color: currentcolor transparent transparent currentcolor;
 }
 .ant-ribbon-rtl.ant-ribbon-placement-start .ant-ribbon-corner::after {
-  border-color: currentColor transparent transparent currentColor;
+  border-color: currentcolor transparent transparent currentcolor;
 }
 
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
@@ -1158,7 +1158,7 @@
   border-radius: 2px;
 }
 .ant-btn > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn > a:only-child::after {
   position: absolute;
@@ -1177,7 +1177,7 @@
 }
 .ant-btn:hover > a:only-child,
 .ant-btn:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn:hover > a:only-child::after,
 .ant-btn:focus > a:only-child::after {
@@ -1195,7 +1195,7 @@
   background: #fff;
 }
 .ant-btn:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn:active > a:only-child::after {
   position: absolute;
@@ -1220,7 +1220,7 @@
 .ant-btn[disabled]:hover > a:only-child,
 .ant-btn[disabled]:focus > a:only-child,
 .ant-btn[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn[disabled] > a:only-child::after,
 .ant-btn[disabled]:hover > a:only-child::after,
@@ -1251,7 +1251,7 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 .ant-btn-primary > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-primary > a:only-child::after {
   position: absolute;
@@ -1270,7 +1270,7 @@
 }
 .ant-btn-primary:hover > a:only-child,
 .ant-btn-primary:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-primary:hover > a:only-child::after,
 .ant-btn-primary:focus > a:only-child::after {
@@ -1288,7 +1288,7 @@
   background: #096dd9;
 }
 .ant-btn-primary:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-primary:active > a:only-child::after {
   position: absolute;
@@ -1313,7 +1313,7 @@
 .ant-btn-primary[disabled]:hover > a:only-child,
 .ant-btn-primary[disabled]:focus > a:only-child,
 .ant-btn-primary[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-primary[disabled] > a:only-child::after,
 .ant-btn-primary[disabled]:hover > a:only-child::after,
@@ -1354,7 +1354,7 @@
   background: transparent;
 }
 .ant-btn-ghost > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-ghost > a:only-child::after {
   position: absolute;
@@ -1373,7 +1373,7 @@
 }
 .ant-btn-ghost:hover > a:only-child,
 .ant-btn-ghost:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-ghost:hover > a:only-child::after,
 .ant-btn-ghost:focus > a:only-child::after {
@@ -1391,7 +1391,7 @@
   background: transparent;
 }
 .ant-btn-ghost:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-ghost:active > a:only-child::after {
   position: absolute;
@@ -1416,7 +1416,7 @@
 .ant-btn-ghost[disabled]:hover > a:only-child,
 .ant-btn-ghost[disabled]:focus > a:only-child,
 .ant-btn-ghost[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-ghost[disabled] > a:only-child::after,
 .ant-btn-ghost[disabled]:hover > a:only-child::after,
@@ -1437,7 +1437,7 @@
   border-style: dashed;
 }
 .ant-btn-dashed > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dashed > a:only-child::after {
   position: absolute;
@@ -1456,7 +1456,7 @@
 }
 .ant-btn-dashed:hover > a:only-child,
 .ant-btn-dashed:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dashed:hover > a:only-child::after,
 .ant-btn-dashed:focus > a:only-child::after {
@@ -1474,7 +1474,7 @@
   background: #fff;
 }
 .ant-btn-dashed:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dashed:active > a:only-child::after {
   position: absolute;
@@ -1499,7 +1499,7 @@
 .ant-btn-dashed[disabled]:hover > a:only-child,
 .ant-btn-dashed[disabled]:focus > a:only-child,
 .ant-btn-dashed[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dashed[disabled] > a:only-child::after,
 .ant-btn-dashed[disabled]:hover > a:only-child::after,
@@ -1521,7 +1521,7 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 .ant-btn-danger > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-danger > a:only-child::after {
   position: absolute;
@@ -1540,7 +1540,7 @@
 }
 .ant-btn-danger:hover > a:only-child,
 .ant-btn-danger:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-danger:hover > a:only-child::after,
 .ant-btn-danger:focus > a:only-child::after {
@@ -1558,7 +1558,7 @@
   background: #d9363e;
 }
 .ant-btn-danger:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-danger:active > a:only-child::after {
   position: absolute;
@@ -1583,7 +1583,7 @@
 .ant-btn-danger[disabled]:hover > a:only-child,
 .ant-btn-danger[disabled]:focus > a:only-child,
 .ant-btn-danger[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-danger[disabled] > a:only-child::after,
 .ant-btn-danger[disabled]:hover > a:only-child::after,
@@ -1604,7 +1604,7 @@
   box-shadow: none;
 }
 .ant-btn-link > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-link > a:only-child::after {
   position: absolute;
@@ -1623,7 +1623,7 @@
 }
 .ant-btn-link:hover > a:only-child,
 .ant-btn-link:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-link:hover > a:only-child::after,
 .ant-btn-link:focus > a:only-child::after {
@@ -1641,7 +1641,7 @@
   background: transparent;
 }
 .ant-btn-link:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-link:active > a:only-child::after {
   position: absolute;
@@ -1666,7 +1666,7 @@
 .ant-btn-link[disabled]:hover > a:only-child,
 .ant-btn-link[disabled]:focus > a:only-child,
 .ant-btn-link[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-link[disabled] > a:only-child::after,
 .ant-btn-link[disabled]:hover > a:only-child::after,
@@ -1702,7 +1702,7 @@
 .ant-btn-link[disabled]:hover > a:only-child,
 .ant-btn-link[disabled]:focus > a:only-child,
 .ant-btn-link[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-link[disabled] > a:only-child::after,
 .ant-btn-link[disabled]:hover > a:only-child::after,
@@ -1723,7 +1723,7 @@
   box-shadow: none;
 }
 .ant-btn-text > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-text > a:only-child::after {
   position: absolute;
@@ -1742,7 +1742,7 @@
 }
 .ant-btn-text:hover > a:only-child,
 .ant-btn-text:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-text:hover > a:only-child::after,
 .ant-btn-text:focus > a:only-child::after {
@@ -1760,7 +1760,7 @@
   background: transparent;
 }
 .ant-btn-text:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-text:active > a:only-child::after {
   position: absolute;
@@ -1785,7 +1785,7 @@
 .ant-btn-text[disabled]:hover > a:only-child,
 .ant-btn-text[disabled]:focus > a:only-child,
 .ant-btn-text[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-text[disabled] > a:only-child::after,
 .ant-btn-text[disabled]:hover > a:only-child::after,
@@ -1824,7 +1824,7 @@
 .ant-btn-text[disabled]:hover > a:only-child,
 .ant-btn-text[disabled]:focus > a:only-child,
 .ant-btn-text[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-text[disabled] > a:only-child::after,
 .ant-btn-text[disabled]:hover > a:only-child::after,
@@ -1844,7 +1844,7 @@
   background: #fff;
 }
 .ant-btn-dangerous > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous > a:only-child::after {
   position: absolute;
@@ -1863,7 +1863,7 @@
 }
 .ant-btn-dangerous:hover > a:only-child,
 .ant-btn-dangerous:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous:hover > a:only-child::after,
 .ant-btn-dangerous:focus > a:only-child::after {
@@ -1881,7 +1881,7 @@
   background: #fff;
 }
 .ant-btn-dangerous:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous:active > a:only-child::after {
   position: absolute;
@@ -1906,7 +1906,7 @@
 .ant-btn-dangerous[disabled]:hover > a:only-child,
 .ant-btn-dangerous[disabled]:focus > a:only-child,
 .ant-btn-dangerous[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous[disabled] > a:only-child::after,
 .ant-btn-dangerous[disabled]:hover > a:only-child::after,
@@ -1928,7 +1928,7 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 .ant-btn-dangerous.ant-btn-primary > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-primary > a:only-child::after {
   position: absolute;
@@ -1947,7 +1947,7 @@
 }
 .ant-btn-dangerous.ant-btn-primary:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-primary:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-primary:hover > a:only-child::after,
 .ant-btn-dangerous.ant-btn-primary:focus > a:only-child::after {
@@ -1965,7 +1965,7 @@
   background: #d9363e;
 }
 .ant-btn-dangerous.ant-btn-primary:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-primary:active > a:only-child::after {
   position: absolute;
@@ -1990,7 +1990,7 @@
 .ant-btn-dangerous.ant-btn-primary[disabled]:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-primary[disabled]:focus > a:only-child,
 .ant-btn-dangerous.ant-btn-primary[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-primary[disabled] > a:only-child::after,
 .ant-btn-dangerous.ant-btn-primary[disabled]:hover > a:only-child::after,
@@ -2011,7 +2011,7 @@
   box-shadow: none;
 }
 .ant-btn-dangerous.ant-btn-link > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link > a:only-child::after {
   position: absolute;
@@ -2030,7 +2030,7 @@
 }
 .ant-btn-dangerous.ant-btn-link:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-link:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link:hover > a:only-child::after,
 .ant-btn-dangerous.ant-btn-link:focus > a:only-child::after {
@@ -2048,7 +2048,7 @@
   background: transparent;
 }
 .ant-btn-dangerous.ant-btn-link:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link:active > a:only-child::after {
   position: absolute;
@@ -2073,7 +2073,7 @@
 .ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child,
 .ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link[disabled] > a:only-child::after,
 .ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child::after,
@@ -2095,7 +2095,7 @@
 }
 .ant-btn-dangerous.ant-btn-link:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-link:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link:hover > a:only-child::after,
 .ant-btn-dangerous.ant-btn-link:focus > a:only-child::after {
@@ -2113,7 +2113,7 @@
   background: transparent;
 }
 .ant-btn-dangerous.ant-btn-link:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link:active > a:only-child::after {
   position: absolute;
@@ -2138,7 +2138,7 @@
 .ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child,
 .ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-link[disabled] > a:only-child::after,
 .ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child::after,
@@ -2159,7 +2159,7 @@
   box-shadow: none;
 }
 .ant-btn-dangerous.ant-btn-text > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text > a:only-child::after {
   position: absolute;
@@ -2178,7 +2178,7 @@
 }
 .ant-btn-dangerous.ant-btn-text:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-text:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text:hover > a:only-child::after,
 .ant-btn-dangerous.ant-btn-text:focus > a:only-child::after {
@@ -2196,7 +2196,7 @@
   background: transparent;
 }
 .ant-btn-dangerous.ant-btn-text:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text:active > a:only-child::after {
   position: absolute;
@@ -2221,7 +2221,7 @@
 .ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child,
 .ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text[disabled] > a:only-child::after,
 .ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child::after,
@@ -2243,7 +2243,7 @@
 }
 .ant-btn-dangerous.ant-btn-text:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-text:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text:hover > a:only-child::after,
 .ant-btn-dangerous.ant-btn-text:focus > a:only-child::after {
@@ -2261,7 +2261,7 @@
   background: rgba(0, 0, 0, 0.028);
 }
 .ant-btn-dangerous.ant-btn-text:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text:active > a:only-child::after {
   position: absolute;
@@ -2286,7 +2286,7 @@
 .ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child,
 .ant-btn-dangerous.ant-btn-text[disabled]:focus > a:only-child,
 .ant-btn-dangerous.ant-btn-text[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-dangerous.ant-btn-text[disabled] > a:only-child::after,
 .ant-btn-dangerous.ant-btn-text[disabled]:hover > a:only-child::after,
@@ -2397,7 +2397,7 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn .anticon.anticon-plus > svg,
 .ant-btn .anticon.anticon-minus > svg {
-  shape-rendering: optimizeSpeed;
+  shape-rendering: optimizespeed;
 }
 .ant-btn.ant-btn-loading {
   position: relative;
@@ -2615,7 +2615,7 @@ a.ant-btn-icon-only > .anticon {
   text-shadow: none;
 }
 .ant-btn-background-ghost.ant-btn-primary > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-primary > a:only-child::after {
   position: absolute;
@@ -2633,7 +2633,7 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn-background-ghost.ant-btn-primary:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-primary:hover > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-primary:focus > a:only-child::after {
@@ -2650,7 +2650,7 @@ a.ant-btn-icon-only > .anticon {
   border-color: #096dd9;
 }
 .ant-btn-background-ghost.ant-btn-primary:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-primary:active > a:only-child::after {
   position: absolute;
@@ -2675,7 +2675,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-primary[disabled] > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:hover > a:only-child::after,
@@ -2695,7 +2695,7 @@ a.ant-btn-icon-only > .anticon {
   text-shadow: none;
 }
 .ant-btn-background-ghost.ant-btn-danger > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-danger > a:only-child::after {
   position: absolute;
@@ -2713,7 +2713,7 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn-background-ghost.ant-btn-danger:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-danger:hover > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-danger:focus > a:only-child::after {
@@ -2730,7 +2730,7 @@ a.ant-btn-icon-only > .anticon {
   border-color: #d9363e;
 }
 .ant-btn-background-ghost.ant-btn-danger:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-danger:active > a:only-child::after {
   position: absolute;
@@ -2755,7 +2755,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-danger[disabled] > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-danger[disabled]:hover > a:only-child::after,
@@ -2775,7 +2775,7 @@ a.ant-btn-icon-only > .anticon {
   text-shadow: none;
 }
 .ant-btn-background-ghost.ant-btn-dangerous > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous > a:only-child::after {
   position: absolute;
@@ -2793,7 +2793,7 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn-background-ghost.ant-btn-dangerous:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous:hover > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-dangerous:focus > a:only-child::after {
@@ -2810,7 +2810,7 @@ a.ant-btn-icon-only > .anticon {
   border-color: #d9363e;
 }
 .ant-btn-background-ghost.ant-btn-dangerous:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous:active > a:only-child::after {
   position: absolute;
@@ -2835,7 +2835,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous[disabled] > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-dangerous[disabled]:hover > a:only-child::after,
@@ -2855,7 +2855,7 @@ a.ant-btn-icon-only > .anticon {
   text-shadow: none;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link > a:only-child::after {
   position: absolute;
@@ -2873,7 +2873,7 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus > a:only-child::after {
@@ -2890,7 +2890,7 @@ a.ant-btn-icon-only > .anticon {
   border-color: transparent;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active > a:only-child::after {
   position: absolute;
@@ -2915,7 +2915,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:focus > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:active > a:only-child {
-  color: currentColor;
+  color: currentcolor;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled] > a:only-child::after,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link[disabled]:hover > a:only-child::after,
@@ -3876,6 +3876,7 @@ a.ant-btn-sm {
 }
 .ant-cascader-checkbox-disabled .ant-cascader-checkbox-input {
   cursor: not-allowed;
+  pointer-events: none;
 }
 .ant-cascader-checkbox-disabled .ant-cascader-checkbox-inner {
   background-color: #f5f5f5;
@@ -4184,6 +4185,7 @@ a.ant-btn-sm {
 }
 .ant-checkbox-disabled .ant-checkbox-input {
   cursor: not-allowed;
+  pointer-events: none;
 }
 .ant-checkbox-disabled .ant-checkbox-inner {
   background-color: #f5f5f5;
@@ -5023,7 +5025,7 @@ textarea.ant-picker-input > input {
   display: inline-block;
   width: 7px;
   height: 7px;
-  border: 0 solid currentColor;
+  border: 0 solid currentcolor;
   border-width: 1.5px 0 0 1.5px;
   content: '';
 }
@@ -5035,7 +5037,7 @@ textarea.ant-picker-input > input {
   display: inline-block;
   width: 7px;
   height: 7px;
-  border: 0 solid currentColor;
+  border: 0 solid currentcolor;
   border-width: 1.5px 0 0 1.5px;
   content: '';
 }
@@ -13378,7 +13380,7 @@ textarea.ant-input-number {
   text-align: center;
   text-transform: none;
   vertical-align: -0.125em;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
@@ -15409,7 +15411,7 @@ textarea.ant-mentions {
   position: absolute;
   width: 6px;
   height: 1.5px;
-  background-color: currentColor;
+  background-color: currentcolor;
   border-radius: 2px;
   transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   content: '';
@@ -18564,7 +18566,7 @@ span.ant-radio + * {
   text-align: center;
   text-transform: none;
   vertical-align: -0.125em;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -18776,7 +18778,7 @@ span.ant-radio + * {
   line-height: 0;
   text-transform: none;
   vertical-align: -0.125em;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
@@ -21277,12 +21279,12 @@ table tr th.ant-table-selection-column::after {
 .ant-table-row-expand-icon:focus,
 .ant-table-row-expand-icon:hover,
 .ant-table-row-expand-icon:active {
-  border-color: currentColor;
+  border-color: currentcolor;
 }
 .ant-table-row-expand-icon::before,
 .ant-table-row-expand-icon::after {
   position: absolute;
-  background: currentColor;
+  background: currentcolor;
   transition: transform 0.3s ease-out;
   content: '';
 }
@@ -22126,7 +22128,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: #1890ff;
-  text-shadow: 0 0 0.25px currentColor;
+  text-shadow: 0 0 0.25px currentcolor;
 }
 .ant-tabs-tab.ant-tabs-tab-disabled {
   color: rgba(0, 0, 0, 0.25);
@@ -23321,6 +23323,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 }
 .ant-select-tree-checkbox-disabled .ant-select-tree-checkbox-input {
   cursor: not-allowed;
+  pointer-events: none;
 }
 .ant-select-tree-checkbox-disabled .ant-select-tree-checkbox-inner {
   background-color: #f5f5f5;
@@ -23863,6 +23866,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 }
 .ant-tree-checkbox-disabled .ant-tree-checkbox-input {
   cursor: not-allowed;
+  pointer-events: none;
 }
 .ant-tree-checkbox-disabled .ant-tree-checkbox-inner {
   background-color: #f5f5f5;
@@ -25538,7 +25542,7 @@ mark {
   text-align: center;
   text-transform: none;
   vertical-align: -0.125em;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
