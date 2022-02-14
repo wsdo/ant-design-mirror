@@ -15269,7 +15269,7 @@ textarea.ant-mentions {
   content: '';
 }
 .ant-menu.ant-menu-root:focus-visible {
-  box-shadow: 0 0 0 2px #111b26;
+  box-shadow: 0 0 0 2px #11263c;
 }
 .ant-menu ul,
 .ant-menu ol {
@@ -15454,7 +15454,7 @@ textarea.ant-mentions {
 }
 .ant-menu-item:focus-visible,
 .ant-menu-submenu-title:focus-visible {
-  box-shadow: 0 0 0 2px #111b26;
+  box-shadow: 0 0 0 2px #11263c;
 }
 .ant-menu > .ant-menu-item-divider {
   margin: 1px 0;
@@ -15852,6 +15852,13 @@ textarea.ant-mentions {
 .ant-menu-light .ant-menu-submenu-active,
 .ant-menu-light .ant-menu-submenu-title:hover {
   color: #177ddc;
+}
+.ant-menu.ant-menu-root:focus-visible {
+  box-shadow: 0 0 0 2px #388ed3;
+}
+.ant-menu-dark .ant-menu-item:focus-visible,
+.ant-menu-dark .ant-menu-submenu-title:focus-visible {
+  box-shadow: 0 0 0 2px #388ed3;
 }
 .ant-menu.ant-menu-dark,
 .ant-menu-dark .ant-menu-sub,
@@ -17134,13 +17141,18 @@ textarea.ant-mentions {
 .ant-pagination-item a:hover {
   text-decoration: none;
 }
-.ant-pagination-item:focus-visible,
 .ant-pagination-item:hover {
   border-color: #177ddc;
   transition: all 0.3s;
 }
-.ant-pagination-item:focus-visible a,
 .ant-pagination-item:hover a {
+  color: #177ddc;
+}
+.ant-pagination-item:focus-visible {
+  border-color: #177ddc;
+  transition: all 0.3s;
+}
+.ant-pagination-item:focus-visible a {
   color: #177ddc;
 }
 .ant-pagination-item-active {
@@ -17151,12 +17163,16 @@ textarea.ant-mentions {
 .ant-pagination-item-active a {
   color: #177ddc;
 }
-.ant-pagination-item-active:focus-visible,
 .ant-pagination-item-active:hover {
   border-color: #165996;
 }
-.ant-pagination-item-active:focus-visible a,
+.ant-pagination-item-active:focus-visible {
+  border-color: #165996;
+}
 .ant-pagination-item-active:hover a {
+  color: #165996;
+}
+.ant-pagination-item-active:focus-visible a {
   color: #165996;
 }
 .ant-pagination-jump-prev,
@@ -17200,16 +17216,20 @@ textarea.ant-mentions {
   opacity: 1;
   transition: all 0.2s;
 }
-.ant-pagination-jump-prev:focus-visible .ant-pagination-item-link-icon,
-.ant-pagination-jump-next:focus-visible .ant-pagination-item-link-icon,
 .ant-pagination-jump-prev:hover .ant-pagination-item-link-icon,
 .ant-pagination-jump-next:hover .ant-pagination-item-link-icon {
   opacity: 1;
 }
-.ant-pagination-jump-prev:focus-visible .ant-pagination-item-ellipsis,
-.ant-pagination-jump-next:focus-visible .ant-pagination-item-ellipsis,
 .ant-pagination-jump-prev:hover .ant-pagination-item-ellipsis,
 .ant-pagination-jump-next:hover .ant-pagination-item-ellipsis {
+  opacity: 0;
+}
+.ant-pagination-jump-prev:focus-visible .ant-pagination-item-link-icon,
+.ant-pagination-jump-next:focus-visible .ant-pagination-item-link-icon {
+  opacity: 1;
+}
+.ant-pagination-jump-prev:focus-visible .ant-pagination-item-ellipsis,
+.ant-pagination-jump-next:focus-visible .ant-pagination-item-ellipsis {
   opacity: 0;
 }
 .ant-pagination-prev,
@@ -17267,19 +17287,28 @@ textarea.ant-mentions {
   transition: all 0.3s;
 }
 .ant-pagination-prev:focus-visible .ant-pagination-item-link,
-.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:focus-visible .ant-pagination-item-link {
+  color: #177ddc;
+  border-color: #177ddc;
+}
 .ant-pagination-prev:hover .ant-pagination-item-link,
 .ant-pagination-next:hover .ant-pagination-item-link {
   color: #177ddc;
   border-color: #177ddc;
 }
 .ant-pagination-disabled,
-.ant-pagination-disabled:hover,
-.ant-pagination-disabled:focus-visible {
+.ant-pagination-disabled:hover {
   cursor: not-allowed;
 }
 .ant-pagination-disabled .ant-pagination-item-link,
-.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link {
+  color: rgba(255, 255, 255, 0.3);
+  border-color: #434343;
+  cursor: not-allowed;
+}
+.ant-pagination-disabled:focus-visible {
+  cursor: not-allowed;
+}
 .ant-pagination-disabled:focus-visible .ant-pagination-item-link {
   color: rgba(255, 255, 255, 0.3);
   border-color: #434343;
@@ -18515,8 +18544,7 @@ span.ant-radio + * {
 .ant-rate-star > div {
   transition: all 0.3s, outline 0s;
 }
-.ant-rate-star > div:hover,
-.ant-rate-star > div:focus-visible {
+.ant-rate-star > div:hover {
   transform: scale(1.1);
 }
 .ant-rate-star > div:focus {
@@ -18524,6 +18552,7 @@ span.ant-radio + * {
 }
 .ant-rate-star > div:focus-visible {
   outline: 1px dashed #d8bd14;
+  transform: scale(1.1);
 }
 .ant-rate-star-first,
 .ant-rate-star-second {
