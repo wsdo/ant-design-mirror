@@ -6612,9 +6612,10 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 .ant-form-horizontal .ant-form-item-control {
   flex: 1 1 0;
-}
-.ant-form-horizontal .ant-form-item-control:not(.ant-col) {
   min-width: 0;
+}
+.ant-form-horizontal .ant-form-item-label.ant-col-24 + .ant-form-item-control {
+  min-width: unset;
 }
 .ant-form-vertical .ant-form-item {
   flex-direction: column;
