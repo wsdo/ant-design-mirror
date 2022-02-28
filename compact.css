@@ -6243,7 +6243,6 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
-  white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s;
 }
