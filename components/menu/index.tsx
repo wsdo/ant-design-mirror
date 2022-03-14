@@ -12,6 +12,7 @@ import collapseMotion from '../_util/motion';
 import { cloneElement } from '../_util/reactNode';
 import MenuContext, { MenuTheme } from './MenuContext';
 import MenuDivider from './MenuDivider';
+import useStyle from './style';
 
 export { MenuDividerProps } from './MenuDivider';
 
@@ -83,7 +84,9 @@ function InternalMenu(props: InternalMenuProps) {
   };
 
   const prefixCls = getPrefixCls('menu', customizePrefixCls);
-  const menuClassName = classNames(`${prefixCls}-${theme}`, className);
+  const [wrapSSR, hashId] = useStyle(rootPrefixCls, prefixCls);
+
+  const menuClassName = classNames(`${prefixCls}-${theme}`, className, hashId);
 
   // ======================== Context ==========================
   const contextValue = React.useMemo(
@@ -99,7 +102,7 @@ function InternalMenu(props: InternalMenuProps) {
   );
 
   // ========================= Render ==========================
-  return (
+  return wrapSSR(
     <MenuContext.Provider value={contextValue}>
       <RcMenu
         getPopupContainer={getPopupContainer}
@@ -115,7 +118,7 @@ function InternalMenu(props: InternalMenuProps) {
           className: `${prefixCls}-submenu-expand-icon`,
         })}
       />
-    </MenuContext.Provider>
+    </MenuContext.Provider>,
   );
 }
 
