@@ -973,9 +973,9 @@
 .ant-badge-rtl {
   direction: rtl;
 }
-.ant-badge-rtl .ant-badge:not(.ant-badge-not-a-wrapper) .ant-badge-count,
-.ant-badge-rtl .ant-badge:not(.ant-badge-not-a-wrapper) .ant-badge-dot,
-.ant-badge-rtl .ant-badge:not(.ant-badge-not-a-wrapper) .ant-scroll-number-custom-component {
+.ant-badge-rtl.ant-badge:not(.ant-badge-not-a-wrapper) .ant-badge-count,
+.ant-badge-rtl.ant-badge:not(.ant-badge-not-a-wrapper) .ant-badge-dot,
+.ant-badge-rtl.ant-badge:not(.ant-badge-not-a-wrapper) .ant-scroll-number-custom-component {
   right: auto;
   left: 0;
   direction: ltr;
@@ -4753,9 +4753,6 @@ textarea.ant-picker-input > input {
 }
 .ant-picker-input > input-lg {
   padding: 3.4px 11px;
-  font-size: 14px;
-}
-.ant-picker-input > input-lg input {
   font-size: 14px;
 }
 .ant-picker-input > input-sm {
@@ -12734,9 +12731,6 @@ textarea.ant-input-number-affix-wrapper {
   padding: 3.4px 11px;
   font-size: 14px;
 }
-.ant-input-number-affix-wrapper-lg input {
-  font-size: 14px;
-}
 .ant-input-number-affix-wrapper-sm {
   padding: 0px 7px;
 }
@@ -12987,9 +12981,6 @@ textarea.ant-input-number {
   padding: 3.4px 11px;
   font-size: 14px;
 }
-.ant-input-number-lg input {
-  font-size: 14px;
-}
 .ant-input-number-sm {
   padding: 0px 7px;
 }
@@ -13126,10 +13117,6 @@ textarea.ant-input-number {
 .ant-input-number-group-lg .ant-input-number,
 .ant-input-number-group-lg > .ant-input-number-group-addon {
   padding: 3.4px 11px;
-  font-size: 14px;
-}
-.ant-input-number-group-lg .ant-input-number input,
-.ant-input-number-group-lg > .ant-input-number-group-addon input {
   font-size: 14px;
 }
 .ant-input-number-group-sm .ant-input-number,
@@ -13627,9 +13614,6 @@ textarea.ant-input-affix-wrapper {
   padding: 3.4px 11px;
   font-size: 14px;
 }
-.ant-input-affix-wrapper-lg input {
-  font-size: 14px;
-}
 .ant-input-affix-wrapper-sm {
   padding: 0px 7px;
 }
@@ -13690,6 +13674,7 @@ textarea.ant-input-affix-wrapper {
 .ant-input-suffix {
   margin-left: 4px;
 }
+.anticon.ant-input-clear-icon,
 .ant-input-clear-icon {
   margin: 0;
   color: rgba(0, 0, 0, 0.25);
@@ -13698,15 +13683,19 @@ textarea.ant-input-affix-wrapper {
   cursor: pointer;
   transition: color 0.3s;
 }
+.anticon.ant-input-clear-icon:hover,
 .ant-input-clear-icon:hover {
   color: rgba(0, 0, 0, 0.45);
 }
+.anticon.ant-input-clear-icon:active,
 .ant-input-clear-icon:active {
   color: rgba(0, 0, 0, 0.85);
 }
+.anticon.ant-input-clear-icon-hidden,
 .ant-input-clear-icon-hidden {
   visibility: hidden;
 }
+.anticon.ant-input-clear-icon-has-suffix,
 .ant-input-clear-icon-has-suffix {
   margin: 0 4px;
 }
@@ -13945,9 +13934,6 @@ textarea.ant-input {
   padding: 3.4px 11px;
   font-size: 14px;
 }
-.ant-input-lg input {
-  font-size: 14px;
-}
 .ant-input-sm {
   padding: 0px 7px;
 }
@@ -14087,10 +14073,6 @@ textarea.ant-input {
 .ant-input-group-lg .ant-input,
 .ant-input-group-lg > .ant-input-group-addon {
   padding: 3.4px 11px;
-  font-size: 14px;
-}
-.ant-input-group-lg .ant-input input,
-.ant-input-group-lg > .ant-input-group-addon input {
   font-size: 14px;
 }
 .ant-input-group-sm .ant-input,
@@ -15026,9 +15008,6 @@ textarea.ant-mentions {
 }
 .ant-mentions-lg {
   padding: 3.4px 11px;
-  font-size: 14px;
-}
-.ant-mentions-lg input {
   font-size: 14px;
 }
 .ant-mentions-sm {
@@ -17262,9 +17241,6 @@ textarea.ant-pagination-options-quick-jumper input {
   padding: 3.4px 11px;
   font-size: 14px;
 }
-.ant-pagination-options-quick-jumper input-lg input {
-  font-size: 14px;
-}
 .ant-pagination-options-quick-jumper input-sm {
   padding: 0px 7px;
 }
@@ -18368,7 +18344,7 @@ span.ant-radio + * {
 .ant-rate-disabled .ant-rate-star {
   cursor: default;
 }
-.ant-rate-disabled .ant-rate-star:hover {
+.ant-rate-disabled .ant-rate-star > div:hover {
   transform: scale(1);
 }
 .ant-rate-star {
@@ -23036,79 +23012,79 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   background-color: #eb2f96;
 }
 .ant-tooltip-pink .ant-tooltip-arrow-content::before {
-  background-color: #eb2f96;
+  background: #eb2f96;
 }
 .ant-tooltip-magenta .ant-tooltip-inner {
   background-color: #eb2f96;
 }
 .ant-tooltip-magenta .ant-tooltip-arrow-content::before {
-  background-color: #eb2f96;
+  background: #eb2f96;
 }
 .ant-tooltip-red .ant-tooltip-inner {
   background-color: #f5222d;
 }
 .ant-tooltip-red .ant-tooltip-arrow-content::before {
-  background-color: #f5222d;
+  background: #f5222d;
 }
 .ant-tooltip-volcano .ant-tooltip-inner {
   background-color: #fa541c;
 }
 .ant-tooltip-volcano .ant-tooltip-arrow-content::before {
-  background-color: #fa541c;
+  background: #fa541c;
 }
 .ant-tooltip-orange .ant-tooltip-inner {
   background-color: #fa8c16;
 }
 .ant-tooltip-orange .ant-tooltip-arrow-content::before {
-  background-color: #fa8c16;
+  background: #fa8c16;
 }
 .ant-tooltip-yellow .ant-tooltip-inner {
   background-color: #fadb14;
 }
 .ant-tooltip-yellow .ant-tooltip-arrow-content::before {
-  background-color: #fadb14;
+  background: #fadb14;
 }
 .ant-tooltip-gold .ant-tooltip-inner {
   background-color: #faad14;
 }
 .ant-tooltip-gold .ant-tooltip-arrow-content::before {
-  background-color: #faad14;
+  background: #faad14;
 }
 .ant-tooltip-cyan .ant-tooltip-inner {
   background-color: #13c2c2;
 }
 .ant-tooltip-cyan .ant-tooltip-arrow-content::before {
-  background-color: #13c2c2;
+  background: #13c2c2;
 }
 .ant-tooltip-lime .ant-tooltip-inner {
   background-color: #a0d911;
 }
 .ant-tooltip-lime .ant-tooltip-arrow-content::before {
-  background-color: #a0d911;
+  background: #a0d911;
 }
 .ant-tooltip-green .ant-tooltip-inner {
   background-color: #52c41a;
 }
 .ant-tooltip-green .ant-tooltip-arrow-content::before {
-  background-color: #52c41a;
+  background: #52c41a;
 }
 .ant-tooltip-blue .ant-tooltip-inner {
   background-color: #1890ff;
 }
 .ant-tooltip-blue .ant-tooltip-arrow-content::before {
-  background-color: #1890ff;
+  background: #1890ff;
 }
 .ant-tooltip-geekblue .ant-tooltip-inner {
   background-color: #2f54eb;
 }
 .ant-tooltip-geekblue .ant-tooltip-arrow-content::before {
-  background-color: #2f54eb;
+  background: #2f54eb;
 }
 .ant-tooltip-purple .ant-tooltip-inner {
   background-color: #722ed1;
 }
 .ant-tooltip-purple .ant-tooltip-arrow-content::before {
-  background-color: #722ed1;
+  background: #722ed1;
 }
 .ant-tooltip-rtl {
   direction: rtl;
@@ -24736,6 +24712,8 @@ div.ant-typography-edit-content {
   pointer-events: none;
 }
 .ant-typography-edit-content textarea {
+  height: 1em;
+  margin: 0 !important;
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -moz-transition: none;
 }
