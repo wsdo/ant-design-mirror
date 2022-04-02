@@ -12621,7 +12621,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   text-align: center;
 }
 .ant-image-preview.ant-zoom-enter,
-.ant-image-preview.antzoom-appear {
+.ant-image-preview.ant-zoom-appear {
   transform: none;
   opacity: 0;
   -webkit-animation-duration: 0.3s;
@@ -16371,7 +16371,7 @@ textarea.ant-mentions {
   padding-bottom: 24px;
 }
 .ant-modal.ant-zoom-enter,
-.ant-modal.antzoom-appear {
+.ant-modal.ant-zoom-appear {
   transform: none;
   opacity: 0;
   -webkit-animation-duration: 0.3s;
