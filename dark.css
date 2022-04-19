@@ -12699,6 +12699,11 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-image-preview-operations-operation:last-of-type {
   margin-left: 0;
 }
+.ant-image-preview-operations-progress {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .ant-image-preview-operations-icon {
   font-size: 18px;
 }
@@ -21012,6 +21017,11 @@ span.ant-radio + * {
   padding-right: 0;
   padding-left: 16px;
 }
+.ant-steps-rtl .ant-steps-item-title .ant-steps-item-subtitle {
+  float: left;
+  margin-right: 8px;
+  margin-left: 0;
+}
 .ant-steps-rtl .ant-steps-item-title::after {
   right: 100%;
   left: auto;
@@ -21123,6 +21133,10 @@ span.ant-radio + * {
 .ant-steps-rtl.ant-steps-vertical.ant-steps-dot .ant-steps-item-process .ant-steps-icon-dot {
   right: -2px;
   left: auto;
+}
+.ant-steps-rtl.ant-steps-with-progress.ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item:first-child {
+  padding-right: 4px;
+  padding-left: 0;
 }
 .ant-steps-rtl.ant-steps-with-progress.ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item:first-child.ant-steps-item-active {
   padding-right: 4px;
@@ -25410,7 +25424,6 @@ div.ant-typography-edit-content.ant-typography-rtl {
 }
 .ant-upload-list-item-info {
   height: 100%;
-  padding: 0 4px;
   transition: background-color 0.3s;
 }
 .ant-upload-list-item-info > span {
