@@ -1099,6 +1099,7 @@
 .ant-breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 .ant-breadcrumb a {
   color: rgba(0, 0, 0, 0.45);
@@ -24597,7 +24598,9 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   color: #ff4d4f;
 }
 a.ant-typography.ant-typography-danger:active,
-a.ant-typography.ant-typography-danger:focus,
+a.ant-typography.ant-typography-danger:focus {
+  color: #d9363e;
+}
 a.ant-typography.ant-typography-danger:hover {
   color: #ff7875;
 }
