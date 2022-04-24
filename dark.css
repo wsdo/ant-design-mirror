@@ -2502,36 +2502,6 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-group .ant-btn-icon-only {
   font-size: 14px;
 }
-.ant-btn-group-lg > .ant-btn,
-.ant-btn-group-lg > span > .ant-btn {
-  height: 40px;
-  padding: 6.4px 15px;
-  font-size: 16px;
-  border-radius: 0;
-}
-.ant-btn-group-lg .ant-btn.ant-btn-icon-only {
-  width: 40px;
-  height: 40px;
-  padding-right: 0;
-  padding-left: 0;
-}
-.ant-btn-group-sm > .ant-btn,
-.ant-btn-group-sm > span > .ant-btn {
-  height: 24px;
-  padding: 0px 7px;
-  font-size: 14px;
-  border-radius: 0;
-}
-.ant-btn-group-sm > .ant-btn > .anticon,
-.ant-btn-group-sm > span > .ant-btn > .anticon {
-  font-size: 14px;
-}
-.ant-btn-group-sm .ant-btn.ant-btn-icon-only {
-  width: 24px;
-  height: 24px;
-  padding-right: 0;
-  padding-left: 0;
-}
 .ant-btn-group .ant-btn + .ant-btn,
 .ant-btn + .ant-btn-group,
 .ant-btn-group span + .ant-btn,
@@ -18907,6 +18877,13 @@ span.ant-radio + * {
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   will-change: transform, width;
 }
+.ant-segmented.ant-segmented-rtl {
+  direction: rtl;
+}
+.ant-segmented.ant-segmented-rtl .ant-segmented-item-icon {
+  margin-right: 0;
+  margin-left: 6px;
+}
 
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
@@ -21341,6 +21318,10 @@ span.ant-radio + * {
 .ant-table.ant-table-middle .ant-table-tbody .ant-table-wrapper:only-child .ant-table {
   margin: -12px -8px -12px 25px;
 }
+.ant-table.ant-table-middle .ant-table-selection-column {
+  -webkit-padding-start: 2px;
+          padding-inline-start: 2px;
+}
 .ant-table.ant-table-small {
   font-size: 14px;
 }
@@ -21360,6 +21341,10 @@ span.ant-radio + * {
 }
 .ant-table.ant-table-small .ant-table-tbody .ant-table-wrapper:only-child .ant-table {
   margin: -8px -8px -8px 25px;
+}
+.ant-table.ant-table-small .ant-table-selection-column {
+  -webkit-padding-start: 2px;
+          padding-inline-start: 2px;
 }
 .ant-table.ant-table-bordered > .ant-table-title {
   border: 1px solid #303030;
@@ -22575,7 +22560,6 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   list-style: none;
   font-feature-settings: 'tnum';
   display: flex;
-  overflow: hidden;
 }
 .ant-tabs > .ant-tabs-nav,
 .ant-tabs > div > .ant-tabs-nav {
