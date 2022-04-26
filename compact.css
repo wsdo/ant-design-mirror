@@ -1099,6 +1099,8 @@
 .ant-breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .ant-breadcrumb a {
