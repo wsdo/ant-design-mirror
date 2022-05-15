@@ -730,4 +730,4 @@ tr:last-child td {
 @media (max-width: 576px) {
   #components-page-header-demo-responsive .content {
     display: block;
-  }`,src:"/demo-0.8126092212708214.html"}}}]);
+  }`,src:"/demo-0.07948266554859074.html"}}}]);
