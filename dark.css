@@ -293,13 +293,12 @@
   display: none;
 }
 .ant-anchor-link {
-  padding: 7px 0 7px 16px;
-  line-height: 1.143;
+  padding: 4px 0 4px 16px;
 }
 .ant-anchor-link-title {
   position: relative;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.85);
   white-space: nowrap;
@@ -313,8 +312,8 @@
   color: #177ddc;
 }
 .ant-anchor-link .ant-anchor-link {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .ant-anchor-rtl {
   direction: rtl;
@@ -335,7 +334,7 @@
   transform: translateX(50%);
 }
 .ant-anchor-rtl .ant-anchor-link {
-  padding: 7px 16px 7px 0;
+  padding: 4px 16px 4px 0;
 }
 
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
@@ -4899,6 +4898,8 @@ textarea.ant-picker-input > input {
   list-style: none;
   font-feature-settings: 'tnum';
   position: absolute;
+  top: -9999px;
+  left: -9999px;
   z-index: 1050;
 }
 .ant-picker-dropdown-hidden {
@@ -21445,7 +21446,7 @@ span.ant-radio + * {
 .ant-table-cell .ant-table-container:first-child {
   border-top: 0;
 }
-.ant-table-cell-scrollbar {
+.ant-table-cell-scrollbar:not([rowspan]) {
   box-shadow: 0 1px 0 1px #1d1d1d;
 }
 .ant-table-wrapper {

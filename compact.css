@@ -294,12 +294,11 @@
 }
 .ant-anchor-link {
   padding: 4px 0 4px 16px;
-  line-height: 1.143;
 }
 .ant-anchor-link-title {
   position: relative;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.85);
   white-space: nowrap;
@@ -313,8 +312,8 @@
   color: #1890ff;
 }
 .ant-anchor-link .ant-anchor-link {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .ant-anchor-rtl {
   direction: rtl;
@@ -4899,6 +4898,8 @@ textarea.ant-picker-input > input {
   list-style: none;
   font-feature-settings: 'tnum';
   position: absolute;
+  top: -9999px;
+  left: -9999px;
   z-index: 1050;
 }
 .ant-picker-dropdown-hidden {
@@ -21161,7 +21162,7 @@ span.ant-radio + * {
 .ant-table-cell .ant-table-container:first-child {
   border-top: 0;
 }
-.ant-table-cell-scrollbar {
+.ant-table-cell-scrollbar:not([rowspan]) {
   box-shadow: 0 1px 0 1px #fafafa;
 }
 .ant-table-wrapper {
