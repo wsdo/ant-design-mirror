@@ -18843,7 +18843,7 @@ span.ant-radio + * {
   word-break: keep-all;
 }
 .ant-segmented-item-icon + * {
-  margin-left: 12px / 2;
+  margin-left: 6px;
 }
 .ant-segmented-item-input {
   position: absolute;
