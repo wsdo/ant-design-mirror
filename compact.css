@@ -3268,7 +3268,6 @@ a.ant-btn-sm {
   border-bottom: 1px solid #f0f0f0;
 }
 .ant-card-extra {
-  float: right;
   margin-left: auto;
   padding: 8.5px 0;
   color: rgba(0, 0, 0, 0.85);
@@ -3291,21 +3290,21 @@ a.ant-btn-sm {
   clear: both;
   content: '';
 }
+.ant-card-contain-grid .ant-card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
 .ant-card-contain-grid:not(.ant-card-loading) .ant-card-body {
   margin: -1px 0 0 -1px;
   padding: 0;
 }
 .ant-card-grid {
-  float: left;
   width: 33.33%;
   padding: 12px;
   border: 0;
   border-radius: 0;
   box-shadow: 1px 0 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0, 1px 1px 0 0 #f0f0f0, 1px 0 0 0 #f0f0f0 inset, 0 1px 0 0 #f0f0f0 inset;
   transition: all 0.3s;
-}
-.ant-card-rtl .ant-card-grid {
-  float: right;
 }
 .ant-card-grid-hoverable:hover {
   position: relative;
@@ -3332,6 +3331,7 @@ a.ant-btn-sm {
   border-radius: 2px 2px 0 0;
 }
 .ant-card-actions {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3348,13 +3348,9 @@ a.ant-btn-sm {
   content: '';
 }
 .ant-card-actions > li {
-  float: left;
   margin: 4px 0;
   color: rgba(0, 0, 0, 0.45);
   text-align: center;
-}
-.ant-card-rtl .ant-card-actions > li {
-  float: right;
 }
 .ant-card-actions > li > span {
   position: relative;
@@ -3406,6 +3402,7 @@ a.ant-btn-sm {
   padding: 13.5px 0;
 }
 .ant-card-meta {
+  display: flex;
   margin: -4px 0;
 }
 .ant-card-meta::before {
@@ -3418,11 +3415,9 @@ a.ant-btn-sm {
   content: '';
 }
 .ant-card-meta-avatar {
-  float: left;
   padding-right: 16px;
 }
 .ant-card-rtl .ant-card-meta-avatar {
-  float: right;
   padding-right: 0;
   padding-left: 16px;
 }
@@ -3451,36 +3446,6 @@ a.ant-btn-sm {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.ant-card-loading-content p {
-  margin: 0;
-}
-.ant-card-loading-block {
-  height: 14px;
-  margin: 4px 0;
-  background: linear-gradient(90deg, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
-  background-size: 600% 600%;
-  border-radius: 2px;
-  -webkit-animation: card-loading 1.4s ease infinite;
-          animation: card-loading 1.4s ease infinite;
-}
-@-webkit-keyframes card-loading {
-  0%,
-  100% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-@keyframes card-loading {
-  0%,
-  100% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
 }
 .ant-card-small > .ant-card-head {
   min-height: 30px;
@@ -4392,12 +4357,12 @@ a.ant-btn-sm {
 .ant-collapse > .ant-collapse-item.ant-collapse-no-arrow > .ant-collapse-header {
   padding-left: 8px;
 }
-.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+.ant-collapse-icon-position-end > .ant-collapse-item > .ant-collapse-header {
   position: relative;
   padding: 8px 8px;
   padding-right: 40px;
 }
-.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+.ant-collapse-icon-position-end > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
   position: absolute;
   top: 50%;
   right: 8px;
@@ -4462,6 +4427,19 @@ a.ant-btn-sm {
 }
 .ant-collapse-rtl {
   direction: rtl;
+}
+.ant-collapse-rtl.ant-collapse.ant-collapse-icon-position-end > .ant-collapse-item > .ant-collapse-header {
+  position: relative;
+  padding: 8px 8px;
+  padding-left: 40px;
+}
+.ant-collapse-rtl.ant-collapse.ant-collapse-icon-position-end > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  left: 8px;
+  margin: 0;
+  transform: translateY(-50%);
 }
 .ant-collapse-rtl .ant-collapse > .ant-collapse-item > .ant-collapse-header {
   padding: 8px 8px;
@@ -13226,6 +13204,22 @@ textarea.ant-input-number {
 .ant-input-number-group.ant-input-number-group-compact .ant-input-group-wrapper:not(:last-child).ant-input-search > .ant-input-group > .ant-input {
   border-radius: 2px 0 0 2px;
 }
+.ant-input-number-group > .ant-input-number-rtl:first-child {
+  border-radius: 0 2px 2px 0;
+}
+.ant-input-number-group > .ant-input-number-rtl:last-child {
+  border-radius: 2px 0 0 2px;
+}
+.ant-input-number-group-rtl .ant-input-number-group-addon:first-child {
+  border-right: 1px solid #d9d9d9;
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+.ant-input-number-group-rtl .ant-input-number-group-addon:last-child {
+  border-right: 0;
+  border-left: 1px solid #d9d9d9;
+  border-radius: 2px 0 0 2px;
+}
 .ant-input-number-group-wrapper {
   display: inline-block;
   text-align: start;
@@ -14154,6 +14148,7 @@ textarea.ant-input {
 .ant-input-group-rtl .ant-input-group-addon:last-child {
   border-right: 0;
   border-left: 1px solid #d9d9d9;
+  border-radius: 2px 0 0 2px;
 }
 .ant-input-group-rtl.ant-input-group > .ant-input:last-child,
 .ant-input-group-rtl.ant-input-group-addon:last-child {
@@ -16334,8 +16329,8 @@ textarea.ant-mentions {
   margin-left: 38px;
 }
 .ant-modal-confirm .ant-modal-confirm-btns {
-  float: right;
   margin-top: 24px;
+  text-align: right;
 }
 .ant-modal-confirm .ant-modal-confirm-btns .ant-btn + .ant-btn {
   margin-bottom: 0;
@@ -16381,7 +16376,7 @@ textarea.ant-mentions {
   margin-left: 0;
 }
 .ant-modal-wrap-rtl .ant-modal-confirm-btns {
-  float: left;
+  text-align: left;
 }
 .ant-modal-wrap-rtl .ant-modal-confirm-btns .ant-btn + .ant-btn {
   margin-right: 8px;
@@ -17277,55 +17272,55 @@ textarea.ant-pagination-options-quick-jumper input {
   border-color: #d9d9d9;
   cursor: not-allowed;
 }
-.ant-pagination.mini .ant-pagination-total-text,
-.ant-pagination.mini .ant-pagination-simple-pager {
+.ant-pagination.ant-pagination-mini .ant-pagination-total-text,
+.ant-pagination.ant-pagination-mini .ant-pagination-simple-pager {
   height: 22px;
   line-height: 22px;
 }
-.ant-pagination.mini .ant-pagination-item {
+.ant-pagination.ant-pagination-mini .ant-pagination-item {
   min-width: 22px;
   height: 22px;
   margin: 0;
   line-height: 20px;
 }
-.ant-pagination.mini .ant-pagination-item:not(.ant-pagination-item-active) {
+.ant-pagination.ant-pagination-mini .ant-pagination-item:not(.ant-pagination-item-active) {
   background: transparent;
   border-color: transparent;
 }
-.ant-pagination.mini .ant-pagination-prev,
-.ant-pagination.mini .ant-pagination-next {
+.ant-pagination.ant-pagination-mini .ant-pagination-prev,
+.ant-pagination.ant-pagination-mini .ant-pagination-next {
   min-width: 22px;
   height: 22px;
   margin: 0;
   line-height: 22px;
 }
-.ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link,
-.ant-pagination.mini .ant-pagination-next .ant-pagination-item-link {
+.ant-pagination.ant-pagination-mini .ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination.ant-pagination-mini .ant-pagination-next .ant-pagination-item-link {
   background: transparent;
   border-color: transparent;
 }
-.ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link::after,
-.ant-pagination.mini .ant-pagination-next .ant-pagination-item-link::after {
+.ant-pagination.ant-pagination-mini .ant-pagination-prev .ant-pagination-item-link::after,
+.ant-pagination.ant-pagination-mini .ant-pagination-next .ant-pagination-item-link::after {
   height: 22px;
   line-height: 22px;
 }
-.ant-pagination.mini .ant-pagination-jump-prev,
-.ant-pagination.mini .ant-pagination-jump-next {
+.ant-pagination.ant-pagination-mini .ant-pagination-jump-prev,
+.ant-pagination.ant-pagination-mini .ant-pagination-jump-next {
   height: 22px;
   margin-right: 0;
   line-height: 22px;
 }
-.ant-pagination.mini .ant-pagination-options {
+.ant-pagination.ant-pagination-mini .ant-pagination-options {
   margin-left: 2px;
 }
-.ant-pagination.mini .ant-pagination-options-size-changer {
+.ant-pagination.ant-pagination-mini .ant-pagination-options-size-changer {
   top: 1px;
 }
-.ant-pagination.mini .ant-pagination-options-quick-jumper {
+.ant-pagination.ant-pagination-mini .ant-pagination-options-quick-jumper {
   height: 22px;
   line-height: 22px;
 }
-.ant-pagination.mini .ant-pagination-options-quick-jumper input {
+.ant-pagination.ant-pagination-mini .ant-pagination-options-quick-jumper input {
   padding: 0px 7px;
   width: 44px;
   height: 22px;
@@ -18097,6 +18092,9 @@ textarea.ant-pagination-options-quick-jumper input {
   cursor: pointer;
   opacity: 0;
 }
+.ant-radio.ant-radio-disabled .ant-radio-inner {
+  border-color: #d9d9d9;
+}
 .ant-radio-checked .ant-radio-inner {
   border-color: #1890ff;
 }
@@ -18110,7 +18108,6 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-radio-disabled .ant-radio-inner {
   background-color: #f5f5f5;
-  border-color: #d9d9d9 !important;
   cursor: not-allowed;
 }
 .ant-radio-disabled .ant-radio-inner::after {
@@ -19379,7 +19376,6 @@ span.ant-radio + * {
 .ant-skeleton-content .ant-skeleton-title {
   width: 100%;
   height: 14px;
-  margin-top: 8px;
   background: rgba(190, 190, 190, 0.2);
   border-radius: 4px;
 }
@@ -19414,34 +19410,85 @@ span.ant-radio + * {
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-title,
 .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-paragraph > li {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-title::after,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-paragraph > li::after {
+  position: absolute;
+  top: 0;
+  right: -150%;
+  bottom: 0;
+  left: -150%;
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
-  background-size: 400% 100%;
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
+  content: "";
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-avatar {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.ant-skeleton.ant-skeleton-active .ant-skeleton-avatar::after {
+  position: absolute;
+  top: 0;
+  right: -150%;
+  bottom: 0;
+  left: -150%;
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
-  background-size: 400% 100%;
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
+  content: "";
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-button {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.ant-skeleton.ant-skeleton-active .ant-skeleton-button::after {
+  position: absolute;
+  top: 0;
+  right: -150%;
+  bottom: 0;
+  left: -150%;
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
-  background-size: 400% 100%;
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
+  content: "";
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-input {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.ant-skeleton.ant-skeleton-active .ant-skeleton-input::after {
+  position: absolute;
+  top: 0;
+  right: -150%;
+  bottom: 0;
+  left: -150%;
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
-  background-size: 400% 100%;
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
+  content: "";
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-image {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.ant-skeleton.ant-skeleton-active .ant-skeleton-image::after {
+  position: absolute;
+  top: 0;
+  right: -150%;
+  bottom: 0;
+  left: -150%;
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(129, 129, 129, 0.24) 37%, rgba(190, 190, 190, 0.2) 63%);
-  background-size: 400% 100%;
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
+  content: "";
 }
 .ant-skeleton.ant-skeleton-block {
   width: 100%;
@@ -19578,18 +19625,18 @@ span.ant-radio + * {
 }
 @-webkit-keyframes ant-skeleton-loading {
   0% {
-    background-position: 100% 50%;
+    transform: translateX(-37.5%);
   }
   100% {
-    background-position: 0 50%;
+    transform: translateX(37.5%);
   }
 }
 @keyframes ant-skeleton-loading {
   0% {
-    background-position: 100% 50%;
+    transform: translateX(-37.5%);
   }
   100% {
-    background-position: 0 50%;
+    transform: translateX(37.5%);
   }
 }
 .ant-skeleton-rtl {
@@ -20088,6 +20135,9 @@ span.ant-radio + * {
   margin-bottom: 0px;
   color: rgba(0, 0, 0, 0.45);
   font-size: 12px;
+}
+.ant-statistic-skeleton {
+  padding-top: 8px;
 }
 .ant-statistic-content {
   color: rgba(0, 0, 0, 0.85);
