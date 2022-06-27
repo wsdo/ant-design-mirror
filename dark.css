@@ -2394,6 +2394,9 @@ li:last-child .ant-breadcrumb-separator {
   display: flex;
   justify-content: center;
 }
+.ant-btn-icon-only .anticon-loading {
+  padding: 0 !important;
+}
 a.ant-btn-icon-only {
   vertical-align: -1px;
 }
@@ -2476,9 +2479,6 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn > .ant-btn-loading-icon .anticon svg {
   -webkit-animation: loadingCircle 1s infinite linear;
           animation: loadingCircle 1s infinite linear;
-}
-.ant-btn > .ant-btn-loading-icon:only-child .anticon {
-  padding-right: 0;
 }
 .ant-btn-group {
   position: relative;
@@ -3034,10 +3034,6 @@ a.ant-btn-sm {
 .ant-btn-rtl.ant-btn > .ant-btn-loading-icon .anticon {
   padding-right: 0;
   padding-left: 8px;
-}
-.ant-btn > .ant-btn-loading-icon:only-child .anticon {
-  padding-right: 0;
-  padding-left: 0;
 }
 .ant-btn-rtl.ant-btn > .anticon + span,
 .ant-btn-rtl.ant-btn > span + .anticon {
@@ -17856,6 +17852,7 @@ textarea.ant-pagination-options-quick-jumper input {
   pointer-events: none;
 }
 .ant-popover-arrow-content {
+  --antd-arrow-background-color: #1f1f1f;
   position: absolute;
   top: 0;
   right: 0;
@@ -17877,7 +17874,7 @@ textarea.ant-pagination-options-quick-jumper input {
   left: -11.3137085px;
   width: 33.9411255px;
   height: 33.9411255px;
-  background: #1f1f1f;
+  background: var(--antd-arrow-background-color);
   background-repeat: no-repeat;
   background-position: -10px -10px;
   content: '';
@@ -19730,7 +19727,7 @@ span.ant-radio + * {
 .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-paragraph > li {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-title::after,
 .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-paragraph > li::after {
@@ -19742,12 +19739,12 @@ span.ant-radio + * {
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(190, 190, 190, 0.2) 63%);
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
-  content: "";
+  content: '';
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-avatar {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-avatar::after {
   position: absolute;
@@ -19758,12 +19755,12 @@ span.ant-radio + * {
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(190, 190, 190, 0.2) 63%);
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
-  content: "";
+  content: '';
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-button {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-button::after {
   position: absolute;
@@ -19774,12 +19771,12 @@ span.ant-radio + * {
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(190, 190, 190, 0.2) 63%);
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
-  content: "";
+  content: '';
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-input {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-input::after {
   position: absolute;
@@ -19790,12 +19787,12 @@ span.ant-radio + * {
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(190, 190, 190, 0.2) 63%);
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
-  content: "";
+  content: '';
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-image {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 .ant-skeleton.ant-skeleton-active .ant-skeleton-image::after {
   position: absolute;
@@ -19806,7 +19803,7 @@ span.ant-radio + * {
   background: linear-gradient(90deg, rgba(190, 190, 190, 0.2) 25%, rgba(255, 255, 255, 0.16) 37%, rgba(190, 190, 190, 0.2) 63%);
   -webkit-animation: ant-skeleton-loading 1.4s ease infinite;
           animation: ant-skeleton-loading 1.4s ease infinite;
-  content: "";
+  content: '';
 }
 .ant-skeleton.ant-skeleton-block {
   width: 100%;
@@ -20105,6 +20102,14 @@ span.ant-radio + * {
 }
 .ant-slider-handle.ant-tooltip-open {
   border-color: #177ddc;
+}
+.ant-slider-handle::after {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  content: '';
 }
 .ant-slider:hover .ant-slider-rail {
   background-color: #434343;
@@ -21416,7 +21421,7 @@ span.ant-radio + * {
   margin: -12px -8px;
 }
 .ant-table.ant-table-middle .ant-table-tbody .ant-table-wrapper:only-child .ant-table {
-  margin: -12px -8px -12px 25px;
+  margin: -12px -8px -12px 40px;
 }
 .ant-table.ant-table-middle .ant-table-selection-column {
   -webkit-padding-start: 2px;
@@ -21440,7 +21445,7 @@ span.ant-radio + * {
   margin: -8px -8px;
 }
 .ant-table.ant-table-small .ant-table-tbody .ant-table-wrapper:only-child .ant-table {
-  margin: -8px -8px -8px 25px;
+  margin: -8px -8px -8px 40px;
 }
 .ant-table.ant-table-small .ant-table-selection-column {
   -webkit-padding-start: 2px;
@@ -21643,7 +21648,7 @@ span.ant-radio + * {
 }
 .ant-table-tbody > tr > td > .ant-table-wrapper:only-child .ant-table,
 .ant-table-tbody > tr > td > .ant-table-expanded-row-fixed > .ant-table-wrapper:only-child .ant-table {
-  margin: -16px -16px -16px 33px;
+  margin: -16px -16px -16px 32px;
 }
 .ant-table-tbody > tr > td > .ant-table-wrapper:only-child .ant-table-tbody > tr:last-child > td,
 .ant-table-tbody > tr > td > .ant-table-expanded-row-fixed > .ant-table-wrapper:only-child .ant-table-tbody > tr:last-child > td {
@@ -21927,13 +21932,13 @@ table tr th.ant-table-selection-column::after {
   transition: color 0.3s;
   position: relative;
   display: inline-flex;
-  float: left;
   box-sizing: border-box;
   width: 17px;
   height: 17px;
   padding: 0;
   color: inherit;
   line-height: 17px;
+  vertical-align: -3px;
   background: transparent;
   border: 1px solid #303030;
   border-radius: 2px;
