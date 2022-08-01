@@ -1,14 +1,12 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[230],{3948:function(e,n){e.exports={content:["article",["p","\u4F60\u53EF\u4EE5\u7528\u81EA\u5B9A\u4E49\u65E5\u671F\u5E93\uFF08",["a",{title:null,href:"https://day.js.org"},"day.js"],"\u3001",["a",{title:null,href:"https://date-fns.org"},"date-fns"],"\uFF09\u66FF\u6362 Moment \u4EE5\u4F18\u5316\u6253\u5305\u5927\u5C0F\u3002\u5728\u8FD9\u91CC\u6211\u4EEC\u63D0\u4F9B\u4E86\u4E24\u79CD\u65B9\u5F0F\u6765\u5B9E\u73B0\u66FF\u6362:"],["h2","\u81EA\u5B9A\u4E49\u7EC4\u4EF6"],["p","\u7B2C\u4E00\u79CD\u65B9\u6CD5\u662F\u4F7F\u7528 ",["code","generatePicker"],"\uFF08\u6216 ",["code","generateCalendar"],"\uFF09\u8F85\u52A9\u521B\u5EFA Picker \u7EC4\u4EF6\u3002"],["p","\u6211\u4EEC\u5148\u521D\u59CB\u5316\u4E00\u4E2A ",["code","create-react-app"]," \u7684 antd demo\uFF0C\u4F60\u53EF\u4EE5\u53C2\u8003 ",["a",{title:null,href:"/docs/react/use-in-typescript"},"\u5728 TypeScript \u4E2D\u4F7F\u7528"]," \u8FDB\u884C\u6784\u5EFA\uFF0C\u4E5F\u53EF\u4EE5\u76F4\u63A5\u4ECE\u8FD9\u91CC\u5F00\u59CB",["a",{title:null,href:"https://github.com/xiaohuoni/antd4-generate-picker/commit/47fec964e36d48bd15760f8f5abcb9655c259aa6"},"init antd"]],["h3","DatePicker.tsx"],["p","\u65B0\u5EFA ",["code","src/components/DatePicker.tsx"],"\u3002"],["p","\u7F16\u5199\u5982\u4E0B\u4EE3\u7801:"],["pre",{lang:"tsx",highlighted:`import { Dayjs } from <span class="token string">'dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import dayjsGenerateConfig from <span class="token string">'rc-picker/es/generate/dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import generatePicker from <span class="token string">'antd/es/date-picker/generatePicker'</span><span class="token comment" spellcheck="true">;</span>
-import <span class="token string">'antd/es/date-picker/style/index'</span><span class="token comment" spellcheck="true">;</span>
 
 <span class="token keyword">const</span> DatePicker <span class="token operator">=</span> generatePicker<span class="token operator">&lt;</span>Dayjs<span class="token operator">></span><span class="token punctuation">(</span>dayjsGenerateConfig<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>
 
 export <span class="token keyword">default</span> DatePicker<span class="token comment" spellcheck="true">;</span>`},["code",`import { Dayjs } from 'dayjs';
 import dayjsGenerateConfig from 'rc-picker/es/generate/dayjs';
 import generatePicker from 'antd/es/date-picker/generatePicker';
-import 'antd/es/date-picker/style/index';
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 
@@ -41,14 +39,12 @@ TimePicker.displayName = 'TimePicker';
 export default TimePicker;`]],["h3","Calendar.tsx"],["p","\u65B0\u5EFA ",["code","src/components/Calendar.tsx"],"\u3002"],["p","\u7F16\u5199\u5982\u4E0B\u4EE3\u7801:"],["pre",{lang:"tsx",highlighted:`import { Dayjs } from <span class="token string">'dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import dayjsGenerateConfig from <span class="token string">'rc-picker/es/generate/dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import generateCalendar from <span class="token string">'antd/es/calendar/generateCalendar'</span><span class="token comment" spellcheck="true">;</span>
-import <span class="token string">'antd/es/calendar/style'</span><span class="token comment" spellcheck="true">;</span>
 
 <span class="token keyword">const</span> Calendar <span class="token operator">=</span> generateCalendar<span class="token operator">&lt;</span>Dayjs<span class="token operator">></span><span class="token punctuation">(</span>dayjsGenerateConfig<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>
 
 export <span class="token keyword">default</span> Calendar<span class="token comment" spellcheck="true">;</span>`},["code",`import { Dayjs } from 'dayjs';
 import dayjsGenerateConfig from 'rc-picker/es/generate/dayjs';
 import generateCalendar from 'antd/es/calendar/generateCalendar';
-import 'antd/es/calendar/style';
 
 const Calendar = generateCalendar<Dayjs>(dayjsGenerateConfig);
 

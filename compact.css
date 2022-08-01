@@ -6738,7 +6738,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-form-horizontal .ant-form-item-label[class*='-24 '] + .ant-form-item-control {
   min-width: unset;
 }
-.ant-form-vertical .ant-form-item {
+.ant-form-vertical .ant-form-item-row {
   flex-direction: column;
 }
 .ant-form-vertical .ant-form-item-label > label {
@@ -7304,6 +7304,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-row {
   display: flex;
   flex-flow: row wrap;
+  min-width: 0;
 }
 .ant-row::before,
 .ant-row::after {
@@ -25571,6 +25572,8 @@ div.ant-typography-edit-content.ant-typography-rtl {
           animation-duration: 0.3s;
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
           animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .ant-upload-list .ant-upload-animate-inline-appear,
 .ant-upload-list .ant-upload-animate-inline-enter {

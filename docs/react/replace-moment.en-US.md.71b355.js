@@ -1,14 +1,12 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[229],{3947:function(e,n){e.exports={content:["article",["p","You might want to replace Moment.js with another date library (",["strong","Ant design currently supports ",["a",{title:null,href:"https://day.js.org"},"dayjs"]," and ",["a",{title:null,href:"https://date-fns.org"},"date-fns"]],") to reduce bundle size. We provide two ways to customize:"],["h2","Custom component"],["p","The first way is to use ",["code","generatePicker"]," (or ",["code","generateCalendar"],") to help create Picker components."],["p","First, we initialize an antd demo with ",["code","create-react-app"],". You can refer to ",["a",{title:null,href:"/docs/react/use-in-typescript"},"Use in TypeScript"],", or you can start directly here ",["a",{title:null,href:"https://github.com/xiaohuoni/antd4-generate-picker/commit/47fec964e36d48bd15760f8f5abcb9655c259aa6"},"init antd"]],["h3","DatePicker.tsx"],["p","Create ",["code","src/components/DatePicker.tsx"],"."],["p","For example:"],["pre",{lang:"tsx",highlighted:`import { Dayjs } from <span class="token string">'dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import dayjsGenerateConfig from <span class="token string">'rc-picker/lib/generate/dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import generatePicker from <span class="token string">'antd/es/date-picker/generatePicker'</span><span class="token comment" spellcheck="true">;</span>
-import <span class="token string">'antd/es/date-picker/style/index'</span><span class="token comment" spellcheck="true">;</span>
 
 <span class="token keyword">const</span> DatePicker <span class="token operator">=</span> generatePicker<span class="token operator">&lt;</span>Dayjs<span class="token operator">></span><span class="token punctuation">(</span>dayjsGenerateConfig<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>
 
 export <span class="token keyword">default</span> DatePicker<span class="token comment" spellcheck="true">;</span>`},["code",`import { Dayjs } from 'dayjs';
 import dayjsGenerateConfig from 'rc-picker/lib/generate/dayjs';
 import generatePicker from 'antd/es/date-picker/generatePicker';
-import 'antd/es/date-picker/style/index';
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 
@@ -41,14 +39,12 @@ TimePicker.displayName = 'TimePicker';
 export default TimePicker;`]],["h3","Calendar.tsx"],["p","Create ",["code","src/components/Calendar.tsx"],"."],["p","For example:"],["pre",{lang:"tsx",highlighted:`import { Dayjs } from <span class="token string">'dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import dayjsGenerateConfig from <span class="token string">'rc-picker/lib/generate/dayjs'</span><span class="token comment" spellcheck="true">;</span>
 import generateCalendar from <span class="token string">'antd/es/calendar/generateCalendar'</span><span class="token comment" spellcheck="true">;</span>
-import <span class="token string">'antd/es/calendar/style'</span><span class="token comment" spellcheck="true">;</span>
 
 <span class="token keyword">const</span> Calendar <span class="token operator">=</span> generateCalendar<span class="token operator">&lt;</span>Dayjs<span class="token operator">></span><span class="token punctuation">(</span>dayjsGenerateConfig<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>
 
 export <span class="token keyword">default</span> Calendar<span class="token comment" spellcheck="true">;</span>`},["code",`import { Dayjs } from 'dayjs';
 import dayjsGenerateConfig from 'rc-picker/lib/generate/dayjs';
 import generateCalendar from 'antd/es/calendar/generateCalendar';
-import 'antd/es/calendar/style';
 
 const Calendar = generateCalendar<Dayjs>(dayjsGenerateConfig);
 
