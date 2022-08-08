@@ -196,9 +196,9 @@ export default () => {
       </Form.Item>
     </Form>
   );
-};`]],["h3","Form.Item.useStatus"],["p",["code","type Form.Item.useStatus = (): { status: ValidateStatus | undefined }"]],["p",["code","4.22.0"]," \u65B0\u589E\uFF0C\u53EF\u7528\u4E8E\u83B7\u53D6\u5F53\u524D Form.Item \u7684\u6821\u9A8C\u72B6\u6001\uFF0C\u5982\u679C\u4E0A\u5C42\u6CA1\u6709 Form.Item\uFF0C",["code","status"]," \u5C06\u4F1A\u8FD4\u56DE ",["code","undefined"],"\uFF1A"],["pre",{lang:"tsx",highlighted:`<span class="token keyword">const</span> CustomInput <span class="token operator">=</span> <span class="token punctuation">(</span>{ value }<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> {
+};`]],["h3","Form.Item.useStatus"],["p",["code","type Form.Item.useStatus = (): { status: ValidateStatus | undefined }"]],["p",["code","4.22.0"]," \u65B0\u589E\uFF0C\u53EF\u7528\u4E8E\u83B7\u53D6\u5F53\u524D Form.Item \u7684\u6821\u9A8C\u72B6\u6001\uFF0C\u5982\u679C\u4E0A\u5C42\u6CA1\u6709 Form.Item\uFF0C",["code","status"]," \u5C06\u4F1A\u8FD4\u56DE ",["code","undefined"],"\uFF1A"],["pre",{lang:"tsx",highlighted:`<span class="token keyword">const</span> CustomInput <span class="token operator">=</span> <span class="token punctuation">(</span>{ value<span class="token punctuation">,</span> onChange }<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> {
   <span class="token keyword">const</span> { status } <span class="token operator">=</span> Form<span class="token punctuation">.</span>Item<span class="token punctuation">.</span><span class="token function">useStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>
-  return <span class="token operator">&lt;</span>input value<span class="token operator">=</span>{value} className<span class="token operator">=</span>{\`custom<span class="token operator">-</span>input<span class="token operator">-</span>\${status}\`} <span class="token operator">/</span><span class="token operator">></span><span class="token comment" spellcheck="true">;</span>
+  return <span class="token operator">&lt;</span>input value<span class="token operator">=</span>{value} onChange<span class="token operator">=</span>{onChange} className<span class="token operator">=</span>{\`custom<span class="token operator">-</span>input<span class="token operator">-</span>\${status}\`} <span class="token operator">/</span><span class="token operator">></span><span class="token comment" spellcheck="true">;</span>
 }<span class="token comment" spellcheck="true">;</span>
 
 export <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
@@ -207,9 +207,9 @@ export <span class="token keyword">default</span> <span class="token punctuation
       <span class="token operator">&lt;</span>CustomInput <span class="token operator">/</span><span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>Form<span class="token punctuation">.</span>Item<span class="token operator">></span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>Form<span class="token operator">></span>
-<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>`},["code",`const CustomInput = ({ value }) => {
+<span class="token punctuation">)</span><span class="token comment" spellcheck="true">;</span>`},["code",`const CustomInput = ({ value, onChange }) => {
   const { status } = Form.Item.useStatus();
-  return <input value={value} className={\`custom-input-\${status}\`} />;
+  return <input value={value} onChange={onChange} className={\`custom-input-\${status}\`} />;
 };
 
 export default () => (
